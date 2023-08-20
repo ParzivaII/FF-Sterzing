@@ -3,6 +3,46 @@ body {
 }
 .mainheader {
   width: 100%;
-  height: 60px;
+  height: 120px;
   background-color: #a72920;
+  display: flex;
+  justify-content: space-between;
+}
+.mainheaderlogo {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  padding-left: 20px;
+}
+.mainheaderlogo img {
+  height: 100px;
+  align-self: center;
+}
+.mainheadernav {
+  width: fit-content;
+  height: 100%;
+  background-color: rgb(255, 0, 0);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mainheadernav ul {
+  list-style: none;
+}
+.mainheadernav ul li {
+  display: inline;
+  float: left;
+  line-height: 90px;
+}
+.mainheadernav ul li a {
+  padding: 0 10px;
+}
+.mainheadersm {
+  width: 120px;
+  height: 100%;
+  background-color: aqua;
+  padding-right: 20px;
+}
+.mainheadersmfb {
+}
+.mainheadersmin {
 }
