@@ -1,6 +1,7 @@
 @font-face {
   font-family: Ubuntu;
   src: url(../fonts/Ubuntu-Medium.ttf);
+--color-white:  #F0ECE1
 }
 body {
   background-color: black;
