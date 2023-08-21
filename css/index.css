@@ -1,0 +1,10 @@
+.diashow {
+  width: 100%;
+  height: calc(100vh - 93px);
+  background-color: green;
+  margin-top: 93px;
+  background-image: url(../img/Tank1.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
