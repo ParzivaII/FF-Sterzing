@@ -18,15 +18,17 @@
 }
 .weather {
   overflow: hidden;
+  border: 3px solid red;
   max-width: 36%;
   position: relative;
   height: 910px;
+  align-items: end;
+  display: flex;
+  justify-content: left;
 }
 .weatherradar {
   position: relative;
   border: 0px none;
-  height: 1200px;
+  height: calc(100% + 140px);
   width: 100%;
-  align-self: center;
-  bottom: 140px;
 }
