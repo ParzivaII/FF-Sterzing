@@ -19,7 +19,7 @@
 .weather {
   overflow: hidden;
   border: 3px solid red;
-  max-width: 36%;
+  max-width: 680px;
   position: relative;
   height: 910px;
   align-items: end;
