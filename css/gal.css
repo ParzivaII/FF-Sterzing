@@ -7,3 +7,6 @@
   top: calc(100% / 2 - 93px);
   left: calc(100% / 2 - 15vw);
 }
+.header-main-nav ul li a[href="gal.html"] {
+  color: white;
+}

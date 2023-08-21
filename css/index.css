@@ -1,8 +1,8 @@
-.diashow {
+.homepage-diashow {
   width: 100%;
   height: calc(100vh - 93px);
   margin-top: 93px;
-  background-image: url(../img/Tank1.JPG);
+  background-image: url(../img/pic-tk-1.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: top;
 }
-.org-name {
+.orgname {
   font-family: Ubuntu, sans-serif;
   font-size: 10vh;
   color: #f0ece1;
@@ -25,9 +25,12 @@
   display: flex;
   justify-content: left;
 }
-.weatherradar {
+.weather-radar {
   position: relative;
   border: 0px none;
   height: calc(100% + 140px);
   width: 100%;
+}
+.header-main-img {
+  background-image: url(../img/icon-ff-white.png);
 }
