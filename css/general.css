@@ -119,17 +119,3 @@ body:after {
   background-size: cover;
   margin-right: 20px;
 }
-.weather {
-  overflow: hidden;
-  max-width: 36%;
-  position: relative;
-  height: 910px;
-}
-.weatherradar {
-  position: relative;
-  border: 0px none;
-  height: 114vh;
-  width: 100%;
-  align-self: center;
-  bottom: 140px;
-}
