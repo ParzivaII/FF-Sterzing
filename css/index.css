@@ -1,36 +1,130 @@
-.homepage-diashow {
-  width: 100%;
-  height: calc(100vh - 93px);
+.header-main-img {
+  background-image: url(../img/icon-ff-white.png);
+}
+.homepage {
   margin-top: 93px;
-  background-image: url(../img/pic-tk-1.JPG);
-  background-size: cover;
+  width: 100%;
+}
+.homepage-intro {
+  background-image: url(../img/icon-lfv.png), url(../img/pic-halle.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: 60vh, cover;
+  background-position: center 20vh, center;
+  height: calc(100vh - 93px);
+  position: relative;
+  align-items: top;
   display: flex;
   justify-content: center;
-  align-items: top;
+  z-index: 9;
 }
-.orgname {
+.homepage-intro-title {
   font-family: Ubuntu, sans-serif;
-  font-size: 10vh;
-  color: #f0ece1;
-  margin-top: 120px;
-}
-.weather {
-  overflow: hidden;
-  max-width: 680px;
   position: relative;
-  height: 910px;
+  margin-top: 10vh;
+  font-size: 4vw;
+}
+/* Weather Monitor*/
+.info {
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+  height: 800px;
   align-items: end;
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  margin: 40px 0 0 0;
 }
-.weather-radar {
+.info-weather-radar {
   position: relative;
   border: 0px none;
   height: calc(100% + 140px);
-  width: 100%;
+  width: 580px;
+  margin-right: 3vw;
 }
-.header-main-img {
-  background-image: url(../img/icon-ff-white.png);
+.info-weather-forecast {
+  border: 0px none;
+  height: calc(103% + 140px);
+  width: 580px;
+  margin-left: 3vw;
+}
+.info-statistics {
+  width: 580px;
+  height: 100%;
+  border: 3px solid #f0ece1;
+  background-color: #f0ece1;
+  position: relative;
+  font-family: Ubuntu, sans-serif;
+}
+.info-statistics-titel {
+  font-family: Ubuntu, sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.info-statistics img {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 3px solid transparent;
+}
+.info-statistics h1 {
+  font-size: 60px;
+}
+.info-statistics-icon-1 {
+  position: relative;
+  left: 11.5%;
+}
+.info-statistics-header-1 {
+  position: relative;
+  left: 22%;
+  top: -90px;
+}
+.info-statistics-paragraph-1 {
+  position: relative;
+  left: 22.5%;
+  top: -130px;
+}
+.info-statistics-icon-2 {
+  position: relative;
+  left: 55.2%;
+  top: -400px;
+}
+.info-statistics-header-2 {
+  position: relative;
+  left: 67%;
+  top: -481px;
+}
+.info-statistics-paragraph-2 {
+  position: relative;
+  left: 61.3%;
+  top: -522px;
+}
+.info-statistics-icon-3 {
+  position: relative;
+  left: 10%;
+  top: -500px;
+}
+.info-statistics-header-3 {
+  position: relative;
+  left: 22%;
+  top: -585px;
+}
+.info-statistics-paragraph-3 {
+  position: relative;
+  left: 15.7%;
+  top: -626px;
+}
+.info-statistics-icon-4 {
+  position: relative;
+  left: 55%;
+  top: -890px;
+}
+.info-statistics-header-4 {
+  position: relative;
+  left: 67%;
+  top: -977.3px;
+}
+.info-statistics-paragraph-4 {
+  position: relative;
+  left: 63.7%;
+  top: -1017.6px;
 }
