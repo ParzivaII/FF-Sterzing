@@ -9,7 +9,7 @@
   background-image: url(../img/icon-lfv.png), url(../img/pic-halle.jpg);
   background-repeat: no-repeat;
   background-size: 60vh, cover;
-  background-position: center 20vh, center;
+  background-position: center 28vh, center;
   height: calc(100vh - 93px);
   position: relative;
   align-items: top;
