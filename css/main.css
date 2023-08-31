@@ -5,6 +5,7 @@
 }
 body {
   background-color: black;
+  margin: 0;
 }
 body:after {
   position: absolute;
@@ -77,6 +78,7 @@ body:after {
   display: flex;
   align-items: center;
   column-gap: 15px;
+  
 }
 .header-main-sm-fb {
   width: 40px;
@@ -126,4 +128,4 @@ body:after {
   background-color: #a72920;
   left: 0;
   margin-top: 40px;
-} 
+}
