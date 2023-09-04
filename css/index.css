@@ -22,6 +22,7 @@
   position: relative;
   margin-top: 10vh;
   font-size: 4vw;
+  -webkit-text-stroke: 0.001px #f0ece1;
 }
 /* Weather Monitor*/
 .info {
@@ -33,6 +34,7 @@
   display: flex;
   justify-content: center;
   margin: 40px 0 40px 0;
+  flex-wrap: nowrap;
 }
 .info-weather-radar {
   position: relative;
@@ -41,6 +43,7 @@
   overflow: hidden;
   border: 20px solid #f0ece1;
   border-radius: 25px;
+  width: 580px;
 }
 .info-weather-radar-link {
   position: relative;
@@ -49,11 +52,25 @@
   height: calc(100% + 180px);
   width: 580px;
 }
+.info-block2 {
+  height: 100%;
+}
 .info-weather-forecast {
+  position: relative;
+  margin: 0px 1.5vh 0 1.5vh;
+  height: 360px;
+  overflow: hidden;
+  border: 20px solid #f0ece1;
+  border-radius: 25px;
+  width: 580px;
+  margin-top: 40px;
+}
+.info-weather-forecast-link {
+  position: relative;
+  bottom: 170px;
   border: 0px none;
   height: calc(100% + 180px);
-  width: 580px;
-  margin: 0px 1.5vh 0 1.5vh;
+  width: 100%;
 }
 /* Statistics */
 .info-statistics {
@@ -100,4 +117,16 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
+}
+.info-news {
+  width: 580px;
+  height: 760px;
+  background-color: #f0ece1;
+  border: 20px solid #f0ece1;
+  border-radius: 25px;
+  margin: 0px 1.5vh 0 1.5vh;
+  text-align: center;
+  line-height: 760px;
+  font-size: 80px;
+  font-family: Ubuntu, sans-serif;
 }
