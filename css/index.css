@@ -6,7 +6,7 @@
 }
 .homepage-intro {
   width: 100%;
-  background-image: url(../img/icon-lfv2.png), url(../img/pic-halle.jpg);
+  background-image: url(../img/icon-lfv.png), url(../img/pic-halle.jpg);
   background-repeat: no-repeat;
   background-size: 60vh, cover;
   background-position: center 27vh, center;
@@ -89,19 +89,18 @@
   font-family: Ubuntu, sans-serif;
   position: relative;
   font-size: 25px;
+  top: 10px;
   z-index: 1;
 }
 .info-statistics img {
   position: relative;
-  top: -30px;
-  width: 60%;
+  width: 50%;
   height: auto;
-  border: 3px solid red;
 }
 .info-statistics h1 {
   position: relative;
   font-family: Ubuntu, sans-serif;
-  bottom: 90px;
+  bottom: 50px;
   font-size: 80px;
 }
 .info-statistics-1 {
