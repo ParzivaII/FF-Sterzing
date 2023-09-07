@@ -1,12 +1,37 @@
-.maintainance {
-  margin-top: 93px;
-  font-family: Ubuntu, sans-serif;
-  font-size: 2vw;
-  color: white;
-  position: absolute;
-  top: calc(100% / 2 - 93px);
-  left: calc(100% / 2 - 15vw);
+#fuhrpark {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
-.header-main-nav ul li a[href="fuh.html"] {
-  color: white;
+.fahrzeuge {
+  width: 80vw;
+  height: 70vh;
+  background-color: #f0ece1;
+  margin-top: 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.fahrzeuge-img {
+  position: relative;
+  height: 80%;
+  width: 60%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fahrzeuge-img img {
+  position: relative;
+  height: 100%;
+}
+.fahrzeuge-specs {
+  width: 30%;
+  height: 80%;
+  border: 2px solid black;
+  font-family: Ubuntu, sans-serif;
 }
