@@ -20,6 +20,8 @@
   position: relative;
   height: 80%;
   width: 60%;
+  border: 5px solid #a72920;
+  background-color: black;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -34,4 +36,25 @@
   height: 80%;
   border: 2px solid black;
   font-family: Ubuntu, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.fahrzeuge-specs h1 {
+  text-align: center;
+}
+.fahrzeuge-specs p {
+  font-size: large;
+}
+.fahrzeuge-specs-data {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+}
+.fahrzeuge-specs-data-1 {
+  width: fit-content;
+  margin-left: 15px;
+}
+.fahrzeuge-specs-data-2 {
+  width: fit-content;
+  margin-left: 25px;
 }
