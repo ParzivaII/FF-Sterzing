@@ -6,6 +6,31 @@
   justify-content: start;
   align-items: center;
 }
+.fuhrpark-zug {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.linebreak {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.linebreak hr {
+  width: calc(100vw - 130px);
+  border: 3px solid #f0ece1;
+  margin: 0;
+}
+.linebreak p {
+  color: #f0ece1;
+  margin: 0 0 0 20px;
+  font-size: 30px;
+}
 .fahrzeuge {
   width: 80vw;
   height: 70vh;
