@@ -6,10 +6,10 @@
 }
 .homepage-intro {
   width: 100%;
-  background-image: url(../img/icon-lfv.png), url(../img/pic-halle.jpg);
+  background-image: url(../img/icon-lfv.png), url(../img/pic-halle.png);
   background-repeat: no-repeat;
-  background-size: 60vh, cover;
-  background-position: center 27vh, center;
+  background-size: 30vw, cover;
+  background-position: center 25vh, bottom;
   height: calc(100vh - 93px);
   position: relative;
   align-items: top;
@@ -20,9 +20,9 @@
 .homepage-intro-title {
   font-family: Ubuntu, sans-serif;
   position: relative;
-  margin-top: 10vh;
-  font-size: 4vw;
-  -webkit-text-stroke: 0.001px #f0ece1;
+  margin-top: 12vh;
+  font-size: 3.7vw;
+  color: #f0ece1;
 }
 /* Weather Monitor*/
 .info {
