@@ -16,9 +16,9 @@
 }
 .linebreak {
   width: 100%;
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  margin-top: 20px;
   justify-content: space-between;
 }
 .linebreak hr {
@@ -30,6 +30,9 @@
   color: #f0ece1;
   margin: 0 0 0 20px;
   font-size: 30px;
+}
+#linebreak-kmd {
+  width: calc(100vw - 200px);
 }
 .fahrzeuge {
   width: 80vw;
