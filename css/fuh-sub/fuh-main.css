@@ -1,0 +1,90 @@
+.fahrzeuge {
+  width: 100%;
+  height: calc(100vh - 93px - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fahrzeuge-box {
+  width: 95%;
+  height: 95%;
+  background-color: #f0ece1;
+  border-radius: 50px;
+  display: flex;
+}
+.slider {
+  width: 50vw;
+  max-width: 100vw;
+  height: calc(50vw / 16 * 9);
+  margin: 50px 0 0 50px;
+  border: 5px solid #a72920;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.slider .list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slider .list img {
+  width: 50vw;
+  max-width: 100vw;
+  height: calc(50vw / 16 * 9);
+  object-fit: cover;
+}
+.slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider .buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #a72920;
+  border: 2px solid #a72920;
+  font-family: Ubuntu, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+.slider .buttons button:hover {
+  border-color: #f0ece1;
+  color: #f0ece1;
+}
+.slider .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #f0ece1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #f0ece1;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .dots li.active {
+  width: 30px;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 400px;
+  }
+}

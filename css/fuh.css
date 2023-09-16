@@ -53,12 +53,17 @@
 }
 .fahrzeuge-link:hover {
   border-color: #f0ece1;
+  color: #f0ece1;
 }
 .fahrzeuge {
   width: 550px;
   height: fit-content;
   background-color: #f0ece1;
   overflow: hidden;
+}
+.fahrzeuge:hover {
+  background-color: black;
+  border-color: #f0ece1;
 }
 .fahrzeuge-box {
   height: 100%;
