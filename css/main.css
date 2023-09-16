@@ -15,7 +15,7 @@ body:after {
   overflow: hidden;
   z-index: -1;
   content: url(../img/icon-fcb-color.png) url(../img/icon-ff-white.png)
-    url(../img/icon-ins-color.png);
+    url(../img/icon-ins-color.png) url(../img/pic-halle.png);
 }
 .header-main {
   width: 100%;
