@@ -1,22 +1,62 @@
+body:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../../img/KRF/KRF-1.png) url(../../img/KRF/KRF-2.png) url(../../img/KRF/KRF-3.png) url(../../img/KRF/KRF-4.png) url(../../img/KRF/KRF-5.png) url(../../img/KRF/KRF-6.png) url(../../img/KRF/KRF-7.png) url(../../img/KRF/KRF-8.png);
+}
 .fahrzeuge {
   width: 100%;
-  height: calc(100vh - 93px - 60px);
+  height: 300vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .fahrzeuge-box {
   width: 95%;
-  height: 95%;
+  height: 295vh;
   background-color: #f0ece1;
   border-radius: 50px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.fahrzeuge-box hr {
+  margin: 9vh 0 3vh;
+  width: 100%;
+  border: 5px solid #a72920;
+}
+.fahrzeuge-box h1 {
+  font-size: 9vh;
+  margin: 20px 0 20px;
+}
+.fahrzeuge-info-box {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+}
+.fahrzeuge-info {
+  width: fit-content;
+  height: 100%;
+  font-size: 2vw;
+  line-height: 10vh;
+  display: flex;
+}
+.fahrzeuge-info-1 {
+  width: fit-content;
+  height: 100%;
+  margin-right: 10px;
+}
+.fahrzeuge-info-2 {
+  width: fit-content;
 }
 .slider {
-  width: 50vw;
+  width: 70vw;
   max-width: 100vw;
-  height: calc(50vw / 16 * 9);
-  margin: 50px 0 0 50px;
+  height: calc(70vw / 16 * 9);
   border: 5px solid #a72920;
   position: relative;
   overflow: hidden;
@@ -32,9 +72,9 @@
   transition: 1s;
 }
 .slider .list img {
-  width: 50vw;
+  width: 70vw;
   max-width: 100vw;
-  height: calc(50vw / 16 * 9);
+  height: calc(70vw / 16 * 9);
   object-fit: cover;
 }
 .slider .buttons {
