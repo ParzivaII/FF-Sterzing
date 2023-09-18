@@ -150,7 +150,7 @@ body:after {
 .fahrzeuge-info-text {
   width: 90%;
   height: fit-content;
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin: 0 0 3vh 0;
 }
 .fahrzeuge-info-text p {
