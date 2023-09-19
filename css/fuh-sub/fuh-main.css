@@ -156,3 +156,9 @@ body:after {
 .fahrzeuge-info-text p {
   margin: 0;
 }
+.info-double {
+  line-height: 20vh;
+}
+.img-double {
+  margin: 5vh 0 5vh;
+}
