@@ -101,13 +101,11 @@ body:after {
   background-repeat: no-repeat;
   background-size: 6vh;
   background-position: center;
-  transition: background-image 0.5s ease,  border 0.5s ease, background-size 0.5s ease;
+  transition: background-image 0.5s ease, background-size 0.5s ease;
 }
 .header-main-fb:hover {
   background-image: url(../img/icon-fcb-color.png);
   background-size: 7vh;
-  border: 2px solid #f0ece1;
-  border-radius: 50%;
 }
 .header-main-in {
   height: 4vw;
@@ -118,19 +116,16 @@ body:after {
   background-size: 6vh;
   background-position: center;
   justify-self: right;
-  transition: background-image 0.5s ease,  border 0.5s ease, background-size 0.5s ease;
+  transition: background-image 0.5s ease, background-size 0.5s ease;
 }
 .header-main-in:hover {
   background-image: url(../img/icon-ins-color.png);
   background-size: 7vh;
-  border: 2px solid #f0ece1;
-  border-radius: 50%;
 }
 .section-divider {
   width: 100%;
   height: 10px;
-  background-color: #a72920;
-  margin-top: 20px;
+  background-color: #f0ece1;
 }
 .footer-main {
   width: 100%;

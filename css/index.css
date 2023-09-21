@@ -1,4 +1,4 @@
-.header-main-img {
+.header-main-logo {
   background-image: url(../img/icon-ff-white.png);
 }
 .homepage {
@@ -40,43 +40,40 @@
 /* Weather Monitor*/
 .info {
   overflow: hidden;
-  max-width: 100%;
-  position: relative;
-  height: 800px;
+  height: 780px;
   align-items: start;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 40px 0 40px 0;
-  flex-wrap: nowrap;
 }
 .info-weather-radar {
-  position: relative;
-  margin: 0px 1.5vh 0 1.5vh;
+  width: 580px;
   height: 760px;
   overflow: hidden;
-  border: 20px solid #f0ece1;
-  border-radius: 25px;
-  width: 580px;
+  border: 10px solid #a72920;
+  border-radius: 5px;
+  display: flex;
+  align-items: end;
 }
 .info-weather-radar-link {
   position: relative;
-  bottom: 177px;
-  border: 0px none;
   height: calc(100% + 180px);
   width: 580px;
 }
 .info-block2 {
-  height: 100%;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .info-weather-forecast {
   position: relative;
-  margin: 0px 1.5vh 0 1.5vh;
   height: 360px;
   overflow: hidden;
-  border: 20px solid #f0ece1;
-  border-radius: 25px;
+  border: 10px solid #a72920;
+  border-radius: 5px;
   width: 580px;
-  margin-top: 40px;
 }
 .info-weather-forecast-link {
   position: relative;
@@ -87,13 +84,11 @@
 }
 /* Statistics */
 .info-statistics {
-  width: 620px;
+  width: 580px;
   height: 45%;
   background-color: #f0ece1;
-  position: relative;
-  font-family: Ubuntu, sans-serif;
-  margin: 0px 1.5vh 0 1.5vh;
-  border-radius: 25px;
+  border: 10px solid #a72920;
+  border-radius: 5px;
   display: flex;
   align-items: left;
   justify-content: center;
@@ -134,8 +129,8 @@
   width: 580px;
   height: 760px;
   background-color: #f0ece1;
-  border: 20px solid #f0ece1;
-  border-radius: 25px;
+  border: 10px solid #a72920;
+  border-radius: 5px;
   margin: 0px 1.5vh 0 1.5vh;
   text-align: center;
   line-height: 760px;
@@ -147,30 +142,32 @@
   height: 550px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .directions {
-  width: calc(580px * 2 + 40px);
+  width: 65vw;
   height: 450px;
-  border: 20px solid #f0ece1;
-  border-radius: 25px;
-  margin: 0px 1.5vh 0 1.5vh;
+  border: 10px solid #a72920;
+  border-radius: 5px;
 }
 .contact {
-  width: 580px;
+  width: 500px;
   height: 450px;
-  border: 20px solid #f0ece1;
+  border: 10px solid #a72920;
   background-color: #f0ece1;
-  margin: 0px 1.5vh 0 1.5vh;
-  border-radius: 25px;
+  border-radius: 5px;
   font-family: Ubuntu, sans-serif;
 }
 .contact h1 {
   font-size: 25px;
+  line-height: ;
+  margin: 10px 0 0 10px;
 }
 .contact p {
-  font-size: 17px;
+  font-size: 19px;
+  margin-left: 5px;
 }
 .contact hr {
   border: 1px solid black;
+  margin: 0;
 }
