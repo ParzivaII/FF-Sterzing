@@ -20,9 +20,22 @@
 .homepage-intro-title {
   font-family: Ubuntu, sans-serif;
   position: relative;
+  margin: 0;
+  padding: 0;
   margin-top: 12vh;
   font-size: 3.7vw;
   color: #f0ece1;
+  opacity: 0;
+  filter: blur(4px);
+}
+.homepage-intro-title:nth-child(1) {
+  animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 /* Weather Monitor*/
 .info {
