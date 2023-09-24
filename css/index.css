@@ -40,15 +40,16 @@
 /* Weather Monitor*/
 .info {
   overflow: hidden;
-  height: 780px;
+  height: fit-content;
   align-items: start;
   display: flex;
   justify-content: space-around;
-  margin: 40px 0 40px 0;
+  flex-wrap: wrap;
 }
 .info-weather-radar {
   width: 580px;
   height: 760px;
+  margin: 40px 0 40px 0;
   overflow: hidden;
   border: 10px solid #a72920;
   border-radius: 5px;
@@ -66,6 +67,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 40px 0 40px 0;
 }
 .info-weather-forecast {
   position: relative;
@@ -85,7 +87,7 @@
 /* Statistics */
 .info-statistics {
   width: 580px;
-  height: 45%;
+  height: fit-content;
   background-color: #f0ece1;
   border: 10px solid #a72920;
   border-radius: 5px;
@@ -97,6 +99,7 @@
   font-family: Ubuntu, sans-serif;
   position: relative;
   font-size: 25px;
+  margin: 0 0 20px;
   top: 10px;
   z-index: 1;
 }
@@ -108,8 +111,8 @@
 .info-statistics h1 {
   position: relative;
   font-family: Ubuntu, sans-serif;
-  bottom: 50px;
   font-size: 80px;
+  margin: 0;
 }
 .info-statistics-1 {
   width: 50%;
@@ -126,16 +129,15 @@
   flex-direction: column;
 }
 .info-news {
-  width: 580px;
+  width: 500px;
   height: 760px;
+  margin: 40px 0 40px 0;
   background-color: #f0ece1;
   border: 10px solid #a72920;
   border-radius: 5px;
-  margin: 0px 1.5vh 0 1.5vh;
-  text-align: center;
-  line-height: 760px;
   font-size: 80px;
   font-family: Ubuntu, sans-serif;
+  overflow: hidden;
 }
 .condir {
   width: 100%;
