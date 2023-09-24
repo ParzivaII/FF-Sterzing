@@ -154,3 +154,11 @@
 .img-double {
   margin: 5vh 0 5vh;
 }
+.text-double {
+  line-height: 5vh;
+  width: fit-content;
+  text-align: center;
+}
+.text-div {
+  display: flex;
+}
