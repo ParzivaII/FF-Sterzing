@@ -7,6 +7,14 @@
     <link rel="icon" href="img/icon-ff-black.png" type="img/png" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/mit.css" />
+    <script src="js/tree.js"></script>
+    <script type="module">
+
+      import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+      
+      const div = d3.selectAll("div");
+      
+      </script>
   </head>
   <body>
     <header class="header-main">
@@ -24,7 +32,12 @@
       </div>
     </header>
     <main>
-      <h1 class="maintainance">This Site is under construction</h1>
+      <Tree>(flare, {
+        label: d => d.name,
+        title: (d, n) => `${n.ancestors().reverse().map(d => d.data.name).join(".")}`, // hover text
+        link: (d, n) => `https://github.com/prefuse/Flare/${n.children ? "tree" : "blob"}/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}${n.children ? "" : ".as"}`,
+        width: 1152
+      })</Tree>
     </main>
   </body>
 </html>
