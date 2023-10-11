@@ -64,6 +64,7 @@
   height: fit-content;
   background-color: #f0ece1;
   overflow: hidden;
+  text-align: center;
   transition: background-color 0.2s ease;
 }
 .fahrzeuge:hover {
@@ -76,9 +77,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.fahrzeuge-title {
-  margin-left: 20px;
 }
 .fahrzeuge-img {
   align-self: center;
