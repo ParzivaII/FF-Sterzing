@@ -1,0 +1,39 @@
+#privacy-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: #000000;
+  color: #f0ece1;
+  padding: 10px;
+  text-align: center;
+  z-index: 999;
+  opacity: 95%;
+}
+#privacy-banner a {
+  color: #a72920;
+  transition: color 0.2s ease;
+}
+#privacy-banner a:hover {
+  color: #f0ece1;
+}
+#accept-button {
+  background-color: #a72920;
+  width: 5vw;
+  color: #f0ece1;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+#accept-button:hover {
+  background-color: #f0ece1;
+  color: #a72920;
+}
+
+.hidden {
+  display: none;
+}
