@@ -108,7 +108,7 @@
   width: 50%;
   height: auto;
 }
-.info-statistics h1 {
+.info-statistics h2 {
   position: relative;
   font-family: Ubuntu, sans-serif;
   font-size: 80px;
@@ -160,7 +160,7 @@
   border-radius: 5px;
   font-family: Ubuntu, sans-serif;
 }
-.contact h1 {
+.contact h2 {
   font-size: 25px;
   line-height: ;
   margin: 10px 0 0 10px;
