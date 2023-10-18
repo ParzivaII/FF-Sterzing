@@ -38,6 +38,7 @@ body:after {
   height: 100%;
   display: flex;
   align-items: center;
+  font-family: Ubuntu, sans-serif;
 }
 .header-main-logo {
   width: 7vw;
