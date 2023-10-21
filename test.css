@@ -1,6 +1,3 @@
-#element-3 {
-  color: #f0ece1;
-}
 *,
 *:before,
 *:after {
@@ -9,16 +6,21 @@
   padding: 0;
 }
 
+body {
+  background-color: #1d1f20;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
 #wrapper {
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  justify-content: center;
+  max-width: 80em;
 }
 
 #container {
   float: left;
   padding: 1em;
+  width: 100%;
 }
 
 ol.organizational-chart,
@@ -38,6 +40,7 @@ ol.organizational-chart ol {
 ol.organizational-chart {
   text-align: center;
 }
+
 ol.organizational-chart ol {
   padding-top: 1em;
 }
@@ -48,7 +51,7 @@ ol.organizational-chart li:before,
 ol.organizational-chart li:after,
 ol.organizational-chart > li > div:before,
 ol.organizational-chart > li > div:after {
-  background-color: #f0ece1;
+  background-color: #b7a6aa;
   content: "";
   position: absolute;
 }
@@ -103,11 +106,12 @@ ol.organizational-chart li > div {
   background-color: #fff;
   border-radius: 3px;
   min-height: 2em;
+  padding: 0.5em;
 }
 
 /*** PRIMARY ***/
 ol.organizational-chart > li > div {
-  background-color: transparent;
+  background-color: #a2ed56;
   margin-right: 1em;
 }
 
@@ -148,25 +152,22 @@ ol.organizational-chart > li > ol:after {
 }
 
 ol.organizational-chart > li > ol > li > div {
-  background-color: transparent;
+  background-color: #83e4e2;
 }
 
 /*** TERTIARY ***/
 ol.organizational-chart > li > ol > li > ol > li > div {
-  background-color: #f0ece1;
-  border: 3px solid #ffff33;
+  background-color: #fd6470;
 }
 
 /*** QUATERNARY ***/
 ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
-  background-color: #f0ece1;
-  border: 3px solid #ffff33;
+  background-color: #fca858;
 }
 
 /*** QUINARY ***/
 ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
-  background-color: #f0ece1;
-  border: 3px solid #c0c0c0;
+  background-color: #fddc32;
 }
 
 /*** MEDIA QUERIES ***/
@@ -304,256 +305,101 @@ ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
     top: 0;
     width: 100%;
   }
-  /* Tertiary */
-  ol.organizational-chart > li > ol > li > ol {
-    display: flex;
-    flex-wrap: nowrap;
+  /* Secondary */
+  ol.organizational-chart > li > ol > div {
+    display: inline-block;
+    float: none;
+    margin: 0 1em 1em 1em;
+    vertical-align: bottom;
   }
 
-  ol.organizational-chart > li > ol > li > ol:before,
-  ol.organizational-chart > li > ol > li > ol > li:before {
+  ol.organizational-chart > li > ol > div:only-of-type {
+    margin-bottom: 0;
+    width: calc((100% / 1) - 2em - 4px);
+  }
+
+  ol.organizational-chart > li > ol > div:first-of-type:nth-last-of-type(2),
+  ol.organizational-chart
+    > li
+    > ol
+    > div:first-of-type:nth-last-of-type(2)
+    ~ div {
+    width: calc((100% / 2) - 2em - 4px);
+  }
+
+  ol.organizational-chart > li > ol > div:first-of-type:nth-last-of-type(3),
+  ol.organizational-chart
+    > li
+    > ol
+    > div:first-of-type:nth-last-of-type(3)
+    ~ div {
+    width: calc((100% / 3) - 2em - 4px);
+  }
+
+  ol.organizational-chart > li > ol > div:first-of-type:nth-last-of-type(4),
+  ol.organizational-chart
+    > li
+    > ol
+    > div:first-of-type:nth-last-of-type(4)
+    ~ div {
+    width: calc((100% / 4) - 2em - 4px);
+  }
+
+  ol.organizational-chart > li > ol > div:first-of-type:nth-last-of-type(5),
+  ol.organizational-chart
+    > li
+    > ol
+    > div:first-of-type:nth-last-of-type(5)
+    ~ div {
+    width: calc((100% / 5) - 2em - 4px);
+  }
+
+  ol.organizational-chart > li > ol > div:before,
+  ol.organizational-chart > li > ol > div:after {
+    bottom: -1em !important;
+    top: inherit !important;
+  }
+
+  ol.organizational-chart > li > ol > div:before {
     height: 1em !important;
     left: 50% !important;
-    top: 0 !important;
     width: 3px !important;
   }
 
-  ol.organizational-chart > li > ol > li > ol:after {
-    display: none;
-  }
-
-  ol.organizational-chart > li > ol > li > ol > li {
-    flex-grow: 1;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 1em;
-  }
-
-  ol.organizational-chart > li > ol > li > ol > li:only-of-type {
-    padding-top: 0;
-  }
-
-  ol.organizational-chart > li > ol > li > ol > li:only-of-type:before,
-  ol.organizational-chart > li > ol > li > ol > li:only-of-type:after {
+  ol.organizational-chart > li > ol > div:only-of-type:after {
     display: none;
   }
 
   ol.organizational-chart
     > li
     > ol
-    > li
-    > ol
-    > li:first-of-type:not(:only-of-type):after,
+    > div:first-of-type:not(:only-of-type):after,
   ol.organizational-chart
     > li
     > ol
-    > li
-    > ol
-    > li:last-of-type:not(:only-of-type):after {
+    > div:last-of-type:not(:only-of-type):after {
+    bottom: -1em;
     height: 3px;
-    top: 0;
-    width: 50%;
+    width: calc(50% + 1em + 3px);
   }
 
   ol.organizational-chart
     > li
     > ol
-    > li
-    > ol
-    > li:first-of-type:not(:only-of-type):after {
-    left: 50%;
+    > div:first-of-type:not(:only-of-type):after {
+    left: calc(50% + 3px);
   }
 
   ol.organizational-chart
     > li
     > ol
-    > li
-    > ol
-    > li:last-of-type:not(:only-of-type):after {
-    left: 0;
+    > div:last-of-type:not(:only-of-type):after {
+    left: calc(-1em - 3px);
   }
 
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    + li:not(:last-of-type):after {
+  ol.organizational-chart > li > ol > div + div:not(:last-of-type):after {
     height: 3px;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-  /* Quaternary */
-  ol.organizational-chart > li > ol > li > ol > li > ol {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  ol.organizational-chart > li > ol:before,
-  ol.organizational-chart > li > ol > li > ol > li > ol > li:before {
-    height: 1em !important;
-    left: 50% !important;
-    top: 0 !important;
-    width: 3px !important;
-  }
-
-  ol.organizational-chart > li > ol > li > ol > li > ol:after {
-    display: none;
-  }
-
-  ol.organizational-chart > li > ol > li > ol > li > ol > li {
-    flex-grow: 1;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 1em;
-  }
-
-  ol.organizational-chart > li > ol > li > ol > li > ol > li:only-of-type {
-    padding-top: 0;
-  }
-
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    > ol
-    > li:only-of-type:before,
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    > ol
-    > li:only-of-type:after {
-    display: none;
-  }
-
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    > ol
-    > li:first-of-type:not(:only-of-type):after,
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    > ol
-    > li:last-of-type:not(:only-of-type):after {
-    height: 3px;
-    top: 0;
-    width: 50%;
-  }
-
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    > ol
-    > li:first-of-type:not(:only-of-type):after {
-    left: 50%;
-  }
-
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    > ol
-    > li:last-of-type:not(:only-of-type):after {
-    left: 0;
-  }
-
-  ol.organizational-chart
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    > ol
-    > li
-    + li:not(:last-of-type):after {
-    height: 3px;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-  .organizational-chart-div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .organizational-chart-hr {
-    border: 1px solid black;
-  }
-  .organizational-chart-div-zug {
-    width: 9em;
-  }
-  .organizational-chart-div-zug-stv {
-    width: 9.7em;
-  }
-  .organizational-chart-uss {
-    position: relative;
-    height: 70px;
-    border: 2px solid black;
-    transition: scale 0.5s ease;
-    z-index: 10;
-  }
-  .organizational-chart-uss-stv {
-    position: relative;
-    height: 60px;
-    border: 2px solid black;
-    transition: scale 0.5s ease;
-    z-index: 10;
-  }
-  .organizational-chart-uss-zug {
-    position: relative;
-    height: 55px;
-    border: 2px solid black;
-    transition: scale 0.5s ease;
-    z-index: 10;
-  }
-  .organizational-chart-uss-zug-stv {
-    position: relative;
-    height: 50px;
-    border: 2px solid black;
-    transition: scale 0.5s ease;
-    z-index: 10;
-  }
-  .organizational-chart-uss:hover {
-    position: relative;
-    scale: 1.5;
-    border-color: #f0ece1;
-    cursor: pointer;
-  }
-  .organizational-chart-uss-stv:hover {
-    position: relative;
-    scale: 1.5;
-    border-color: #f0ece1;
-    cursor: pointer;
-  }
-  .organizational-chart-uss-zug:hover {
-    position: relative;
-    scale: 1.5;
-    border-color: #f0ece1;
-    cursor: pointer;
-  }
-  .organizational-chart-uss-zug-stv:hover {
-    position: relative;
-    scale: 1.55;
-    border-color: #f0ece1;
-    cursor: pointer;
+    left: -2em;
+    width: calc(100% + 4em);
   }
 }
