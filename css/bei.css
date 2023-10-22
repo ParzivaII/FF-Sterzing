@@ -1,0 +1,60 @@
+main {
+  min-height: calc(100vh - 90px - 3px - 60px);
+  height: fit-content;
+  color: #f0ece1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main hr {
+  width: 1250px;
+}
+main table {
+  background-color: #f0ece1;
+  border-collapse: collapse;
+  color: black;
+  width: fit-content;
+  text-align: left;
+}
+main table td,
+th {
+  border: 2px solid #a72920;
+}
+main table th {
+  text-align: center;
+  line-height: 3;
+  font-size: 25px;
+}
+main table td {
+  line-height: 2;
+  font-size: 20px;
+}
+.bei {
+  text-align: right;
+}
+.div-table {
+  border: 3px solid #a72920;
+}
+main a {
+  color: #f0ece1;
+  text-decoration: none;
+}
+main a div {
+  width: 300px;
+  height: 60px;
+  background-color: #a72920;
+  border-radius: 10px;
+}
+main a div p {
+  line-height: 60px;
+  font-size: 20px;
+  margin: 0;
+}
+.div-dow {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
