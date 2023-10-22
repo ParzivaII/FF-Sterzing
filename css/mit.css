@@ -27,6 +27,9 @@
 #linebreak-jfw {
   width: calc(100vw - 300px);
 }
+#linebreak-ehm {
+  width: calc(100vw - 285px);
+}
 .div-act {
   width: 100%;
   height: fit-content;
@@ -42,10 +45,22 @@
   align-items: center;
   justify-content: space-around;
 }
+.div-ehm {
+  height: fit-content;
+}
+.div-ehm-group {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .div-mad {
   height: fit-content;
 }
 .div-mad-group {
+  margin-top: 1em;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
@@ -57,15 +72,12 @@
   margin: 1em 0 1em;
 }
 .div-jfw-group {
+  margin: 1em 0 2em;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: left;
-}
-#div-ehm-group {
-  display: flex;
-  justify-content: space-around;
 }
 @media only screen and (max-width: 90em) {
   .div-ver-group {
