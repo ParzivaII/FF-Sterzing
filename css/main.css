@@ -19,7 +19,7 @@ body:after {
 }
 .header-main {
   width: 100%;
-  height: 10vh;
+  height: 90px;
   background-color: #a72920;
   border-bottom: 3px solid black;
   display: flex;

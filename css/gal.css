@@ -1,6 +1,10 @@
 #element-5 {
   color: #f0ece1;
 }
+main {
+  min-height: calc(100vh - 90px - 60px - 3px);
+  height: fit-content;
+}
 .maintainance {
   margin-top: 93px;
   font-family: Ubuntu, sans-serif;
