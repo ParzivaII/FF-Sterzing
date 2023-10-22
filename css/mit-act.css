@@ -11,6 +11,8 @@
   margin-right: auto;
   display: flex;
   justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 #container {
@@ -34,6 +36,9 @@ ol.organizational-chart ol {
 
 ol.organizational-chart {
   text-align: center;
+  overflow: hidden;
+  scale: 0.9;
+  top: -200px;
 }
 ol.organizational-chart ol {
   padding-top: 1em;
@@ -171,6 +176,7 @@ ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
   ol.organizational-chart {
     margin-left: -1em;
     margin-right: -1em;
+    top: -50px;
   }
 
   /* Tertiary */
@@ -610,6 +616,7 @@ ol.organizational-chart
 }
 .organizational-chart-div-3 div {
   font-size: 25px;
+  text-align: center;
 }
 #organizational-chart-div-txt-stv {
   font-size: 22px;
@@ -625,7 +632,7 @@ ol.organizational-chart
 }
 .organizational-chart-uss {
   position: relative;
-  height: 70px;
+  height: 75px;
   border: 2px solid black;
   transition: scale 0.5s ease;
   z-index: 10;

@@ -1,13 +1,12 @@
 #wrapper-2 {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80em;
+  width: fit-content;
 }
 
 #container-2 {
   float: left;
-  padding: 1em;
-  width: 100%;
+  padding: 0;
+  width: fit-content;
+
 }
 
 ol.organizational-chart-2,
@@ -44,7 +43,7 @@ ol.organizational-chart-2 > li > div:after {
 }
 
 ol.organizational-chart-2 ol > li {
-  padding: 1em 0 0 1em;
+  padding: 0 0 0 0;
 }
 
 ol.organizational-chart-2 > li ol:before {
@@ -93,13 +92,13 @@ ol.organizational-chart-2 li > div {
   background-color: #fff;
   border-radius: 3px;
   min-height: 2em;
-  padding: 0.5em;
+  padding: 0;
 }
 
 /*** PRIMARY ***/
 ol.organizational-chart-2 > li > div {
-  background-color: #a2ed56;
-  margin-right: 1em;
+  background-color: transparent;
+  margin-right: 0;
 }
 
 ol.organizational-chart-2 > li > div:before {
@@ -117,7 +116,7 @@ ol.organizational-chart-2 > li > div:first-of-type:after {
 }
 
 ol.organizational-chart-2 > li > div + div {
-  margin-top: 1em;
+  margin-top: 0;
 }
 
 ol.organizational-chart-2 > li > div + div:after {
@@ -139,36 +138,18 @@ ol.organizational-chart-2 > li > ol:after {
 }
 
 ol.organizational-chart-2 > li > ol > li > div {
-  background-color: #83e4e2;
+  background-color:transparent;
 }
-
-/*** TERTIARY ***/
-ol.organizational-chart-2 > li > ol > li > ol > li > div {
-  background-color: #fd6470;
-}
-
-/*** QUATERNARY ***/
-ol.organizational-chart-2 > li > ol > li > ol > li > ol > li > div {
-  background-color: #fca858;
-}
-
-/*** QUINARY ***/
-ol.organizational-chart-2 > li > ol > li > ol > li > ol > li > ol > li > div {
-  background-color: #fddc32;
-}
-
-/*** MEDIA QUERIES ***/
-@media only screen and (min-width: 64em) {
   ol.organizational-chart {
-    margin-left: -1em;
-    margin-right: -1em;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* PRIMARY */
   ol.organizational-chart-2 > li > div {
     display: inline-block;
     float: none;
-    margin: 0 1em 1em 1em;
+    margin: 0;
     vertical-align: bottom;
   }
 
@@ -254,9 +235,9 @@ ol.organizational-chart-2 > li > ol > li > ol > li > ol > li > ol > li > div {
 
   ol.organizational-chart-2 > li > ol > li {
     flex-grow: 1;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
   }
 
   ol.organizational-chart-2 > li > ol > li:only-of-type {
@@ -301,4 +282,43 @@ ol.organizational-chart-2 > li > ol > li > ol > li > ol > li > ol > li > div {
     top: 0;
     width: 100%;
   }
+.organizational-chart-2-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.organizational-chart-2-div-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0ece1;
+  border-radius: 5px;
+  border: 6px solid blue;
+}
+.organizational-chart-2-div-2-stv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0ece1;
+  border-radius: 5px;
+  border: 4px solid blue;
+}
+.organizational-chart-2-div-3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 19em;
+  padding: 0.2em;
+}
+.organizational-chart-2-div-3-stv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 17em;
+  padding: 0.2em;
+}
+.organizational-chart-2-div-3 div {
+  font-size: 17px;
+  width: 10em;
+  text-align: center;
 }

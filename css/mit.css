@@ -21,3 +21,36 @@
 #linebreak-ver {
   width: calc(100vw - 220px);
 }
+#linebreak-mad {
+  width: calc(100vw - 390px);
+}
+.div-act {
+  width: 100%;
+  height: fit-content;
+  border: 0 solid red;
+}
+.div-ver {
+  height: 15em;
+}
+.div-ver-group {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+.div-mad {
+  height: 15em;
+}
+.div-mad-group {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around
+}
+@media only screen and (max-width: 90em) {
+  .div-ver-group {
+    flex-direction: column;
+    height: 35em;
+  }
+}
