@@ -16,6 +16,7 @@
 }
 
 #container {
+  height: 250em;
   float: left;
   padding: 1em;
 }
@@ -173,6 +174,9 @@ ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
 
 /*** MEDIA QUERIES ***/
 @media only screen and (min-width: 90em) {
+  #container {
+    height: 67em;
+  }
   ol.organizational-chart {
     margin-left: -1em;
     margin-right: -1em;

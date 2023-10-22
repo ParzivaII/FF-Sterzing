@@ -1,0 +1,31 @@
+.jfw-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5em;
+  border-radius: 10px;
+  border: 4px dashed #c0c0c0;
+}
+.jfw-div-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0ece1;
+  border-radius: 5px;
+}
+.jfw-div-3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 13em;
+  padding: 0.2em;
+}
+.jfw-div-3 div {
+  font-size: 15px;
+  width: 12em;
+  text-align: center;
+}
+.jfw-div-3-ehm div {
+  font-size: 17px;
+  text-align: center;
+}

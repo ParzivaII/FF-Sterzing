@@ -24,29 +24,48 @@
 #linebreak-mad {
   width: calc(100vw - 390px);
 }
+#linebreak-jfw {
+  width: calc(100vw - 300px);
+}
 .div-act {
   width: 100%;
   height: fit-content;
   border: 0 solid red;
 }
 .div-ver {
-  height: 15em;
+  height: fit-content;
 }
 .div-ver-group {
-  height: 100%;
+  height: fit-content;
+  margin-top: 1em;
   display: flex;
   align-items: center;
-  justify-content: space-around
+  justify-content: space-around;
 }
 .div-mad {
-  height: 15em;
+  height: fit-content;
 }
 .div-mad-group {
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around
+  justify-content: left;
+}
+.div-jfw {
+  height: fit-content;
+  margin: 1em 0 1em;
+}
+.div-jfw-group {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+}
+#div-ehm-group {
+  display: flex;
+  justify-content: space-around;
 }
 @media only screen and (max-width: 90em) {
   .div-ver-group {
