@@ -26,7 +26,7 @@
   border: 5px solid #a72920;
 }
 .fahrzeuge-box h1 {
-  font-size: 9vh;
+  font-size: 6em;
   margin: 20px 0 20px;
 }
 .slider {
@@ -113,7 +113,7 @@
   width: fit-content;
   height: 100%;
   font-size: 2em;
-  line-height: 3em;
+  line-height: 2.5em;
   display: flex;
 }
 .fahrzeuge-info-1 {
@@ -137,7 +137,7 @@
   justify-content: space-around;
 }
 .fahrzeuge-info-3 img {
-  height: 3em;
+  height: 2.5em;
 }
 .fahrzeuge-info-text {
   width: 90%;
@@ -150,28 +150,20 @@
   text-align: justify;
 }
 .info-double {
-  line-height: 20vh;
+  line-height: 5em;
 }
 .img-double {
   margin: 5vh 0 5vh;
 }
 .text-double {
-  line-height: 5vh;
+  line-height: 1.25em;
   width: fit-content;
   text-align: center;
 }
 .text-div {
   display: flex;
 }
-#fuh-tlf2 {
-  position: absolute;
-  top: 10em;
-}
-#fuh-tlf1 {
-  position: absolute;
-  top: 10em;
-}
-#fuh-dek {
-  position: absolute;
-  top: 126.9em;
+.fuh-anchor {
+  position: relative;
+  bottom: 3em;
 }
