@@ -89,3 +89,14 @@
   height: 30px;
   width: 100%;
 }
+@media only screen and (max-width: 1200px) {
+  .fuhrpark-zug-fahrzeuge {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fuhrpark-zug-fahrzeuge a {
+    margin: 20px 0 20px;
+  }
+}
