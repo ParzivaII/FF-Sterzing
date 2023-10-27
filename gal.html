@@ -11,45 +11,91 @@
     <link rel="stylesheet" href="css/pol.css" />
   </head>
   <body>
-    <header class="header-main">
-      <div id="privacy-banner" class="hidden">
-        <p>
-          Wir teilen wir ihnen mit, dass wir Cookies und drittanbieter Cookies
-          verwenden, um sicherzustellen, dass Sie die bestmögliche Erfahrung auf
-          unserer Website erhalten. <br />
-          Durch die Nutzung unserer Website stimmen Sie dem zu.
-        </p>
-        <p>
-          Vi informiamo che utilizziamo cookie e cookie di terze parti per
-          garantire che riceviate la migliore esperienza possibile sul nostro
-          sito web. <br />
-          Utilizzando il nostro sito web, l'utente accetta questo.
-        </p>
-        <button id="accept-button">Ok</button>
+    <div id="privacy-banner" class="hidden">
+      <p>
+        Wir teilen wir ihnen mit, dass wir Cookies und drittanbieter Cookies
+        verwenden, um sicherzustellen, dass Sie die bestmögliche Erfahrung auf
+        unserer Website erhalten. <br />
+        Durch die Nutzung unserer Website stimmen Sie dem zu.
+      </p>
+      <p>
+        Vi informiamo che utilizziamo cookie e cookie di terze parti per
+        garantire che riceviate la migliore esperienza possibile sul nostro sito
+        web. <br />
+        Utilizzando il nostro sito web, l'utente accetta questo.
+      </p>
+      <button id="accept-button">Ok</button>
+    </div>
+    <script src="js/policy.js"></script>
+    <header>
+      <div class="header-main-pc">
+        <nav class="header-main-nav">
+          <a href="index.html"><div class="header-main-logo"></div></a>
+          <a href="ein.html"
+            ><div id="element-1" class="header-main-element">Einsätze</div></a
+          >
+          <a href="fuh.html"
+            ><div id="element-2" class="header-main-element">Fuhrpark</div></a
+          >
+          <a href="mit.html"
+            ><div id="element-3" class="header-main-element">Mitglieder</div></a
+          >
+          <a href="gal.html"
+            ><div id="element-5" class="header-main-element">Galerie</div></a
+          >
+        </nav>
+        <div class="sm">
+          <a target="_blank" href="https://www.facebook.com/FeuerwehrSterzing/"
+            ><div class="sm-fb"></div
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/feuerwehr.sterzing/"
+            ><div class="sm-in"></div
+          ></a>
+        </div>
       </div>
-      <script src="js/policy.js"></script>
-      <nav class="header-main-nav">
-        <a href="index.html"><div class="header-main-logo"></div></a>
-        <a href="ein.html"
-          ><div id="element-1" class="header-main-element">Einsätze</div></a
-        >
-        <a href="fuh.html"
-          ><div id="element-2" class="header-main-element">Fuhrpark</div></a
-        >
-        <a href="mit.html"
-          ><div id="element-3" class="header-main-element">Mitglieder</div></a
-        >
-        <a href="gal.html"
-          ><div id="element-5" class="header-main-element">Galerie</div></a
-        >
-      </nav>
-      <div class="header-main-sm">
-        <a target="_blank" href="https://www.facebook.com/FeuerwehrSterzing/"
-          ><div class="header-main-fb"></div
-        ></a>
-        <a target="_blank" href="https://www.instagram.com/feuerwehr.sterzing/"
-          ><div class="header-main-in"></div
-        ></a>
+      <div class="header-main-mobile">
+        <div class="header-main-nav-2">
+          <div class="nav-2-box">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <hr id="hr-top" />
+              <hr />
+              <hr id="hr-bottom" />
+            </a>
+            <a href="index.html"> <div class="header-main-logo"></div></a>
+            <div class="sm">
+              <a
+                class="sm-box"
+                target="_blank"
+                href="https://www.facebook.com/FeuerwehrSterzing/"
+                ><div class="sm-fb"></div
+              ></a>
+              <a
+                class="sm-box"
+                target="_blank"
+                href="https://www.instagram.com/feuerwehr.sterzing/"
+                ><div class="sm-in"></div
+              ></a>
+            </div>
+          </div>
+          <div id="header-main-element-2">
+            <a href="ein.html">Einsätze</a>
+            <a href="fuh.html">Fuhrpark</a>
+            <a href="mit.html">Mitglieder</a>
+            <a href="gal.html">Galerie</a>
+          </div>
+        </div>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("header-main-element-2");
+            if (x.style.display === "flex") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "flex";
+            }
+          }
+        </script>
       </div>
     </header>
     <main>

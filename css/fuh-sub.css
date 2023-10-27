@@ -29,7 +29,8 @@
   font-size: 6em;
   margin: 20px 0 20px;
 }
-.slider {
+.slider,
+.slider2 {
   width: 60em;
   max-width: 100vw;
   height: calc(60em / 16 * 9);
@@ -38,7 +39,8 @@
   overflow: hidden;
   border-radius: 10px;
 }
-.slider .list {
+.slider .list,
+.slider2 .list {
   position: absolute;
   width: max-content;
   height: 100%;
@@ -47,12 +49,14 @@
   display: flex;
   transition: 1s;
 }
-.slider .list img {
+.slider .list img,
+.slider2 .list img {
   width: 60em;
   height: calc(60em / 16 * 9);
   object-fit: cover;
 }
-.slider .buttons {
+.slider .buttons,
+.slider2 .buttons {
   position: absolute;
   top: 45%;
   left: 5%;
@@ -60,7 +64,8 @@
   display: flex;
   justify-content: space-between;
 }
-.slider .buttons button {
+.slider .buttons button,
+.slider2 .buttons button {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -71,11 +76,13 @@
   font-weight: bold;
   font-size: 20px;
 }
-.slider .buttons button:hover {
+.slider .buttons button:hover,
+.slider2 .buttons button:hover {
   border-color: #f0ece1;
   color: #f0ece1;
 }
-.slider .dots {
+.slider .dots,
+.slider2 .dots {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -86,7 +93,8 @@
   display: flex;
   justify-content: center;
 }
-.slider .dots li {
+.slider .dots li,
+.slider2 .dots li {
   list-style: none;
   width: 10px;
   height: 10px;
@@ -95,11 +103,13 @@
   border-radius: 20px;
   transition: 0.5s;
 }
-.slider .dots li.active {
+.slider .dots li.active,
+.slider2 .dots li.activ {
   width: 30px;
 }
 @media screen and (max-width: 768px) {
-  .slider {
+  .slider,
+  .slider2 {
     height: 400px;
   }
 }

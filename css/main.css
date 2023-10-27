@@ -14,10 +14,11 @@ body:after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url(../img/icon-fcb-color.png) url(../img/icon-ff-white.png)
-    url(../img/icon-ins-color.png) url(../img/pic-halle.png);
+  content: url(../img/icon-ff-white.png) url(../img/icon-fcb-color.png)
+    url(../img/icon-ff-white.png) url(../img/icon-ins-color.png)
+    url(../img/pic-halle.png);
 }
-.header-main {
+.header-main-pc {
   width: 100%;
   height: 90px;
   background-color: #a72920;
@@ -41,92 +42,155 @@ body:after {
   font-family: Ubuntu, sans-serif;
 }
 .header-main-logo {
-  width: 7vw;
-  height: 100%;
+  width: 90px;
+  height: 90px;
   background-image: url(../img/icon-ff-black.png);
   background-repeat: no-repeat;
-  background-size: 6vh;
+  background-size: 55px;
   background-position: center;
-  margin: 0 1vw 0 1vw;
-  transition: background-size 0.5s ease, background-image 0.5s ease;
+  margin: 0 20px 0 20px;
+  transition: scale 0.5s ease, background-image 0.5s ease;
 }
 .header-main-logo:hover {
   background-image: url(../img/icon-ff-white.png);
-  background-size: 6.5vh;
 }
 .header-main-element {
   position: relative;
-  width: 9vw;
-  height: 10vh;
-  line-height: 10vh;
+  width: fit-content;
+  height: 90px;
+  line-height: 90px;
   text-align: center;
-  font-size: 1.6vw;
-  margin: 1vw;
-  transition: font-size 0.5s ease, border-color 0.5s ease, color 0.5s ease;
-}
-#element-1 {
-  width: 7.2vw;
-}
-#element-2 {
-  width: 7.7vw;
-}
-#element-3 {
-  width: 9vw;
-}
-#element-4 {
-  width: 6.7vw;
-}
-#element-5 {
-  width: 6.2vw;
+  font-size: 2em;
+  margin: 1em;
+  transition: scale 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 }
 .header-main-element:hover {
   color: #f0ece1;
   border-color: #f0ece1;
-  font-size: 1.8vw;
+  scale: 1.2;
 }
-.header-main-sm {
-  width: fit-content;
+.sm {
+  width: 140px;
+  height: 90px;
+  margin-right: 10px;
   display: flex;
-  justify-content: end;
   align-items: center;
-  margin-right: 40px;
+  justify-content: space-around;
 }
-.header-main-sm a {
-  height: 4vw;
-  width: 4vw;
-}
-.header-main-fb {
-  width: 4vw;
-  height: 4vw;
-  background-image: url(../img/icon-fcb-black.png);
+.sm-in {
+  width: 55px;
+  height: 55px;
+  border: 1px solid transparent;
+  border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: 6vh;
-  background-position: center;
-  transition: background-image 0.5s ease, background-size 0.5s ease;
-}
-.header-main-fb:hover {
-  background-image: url(../img/icon-fcb-color.png);
-  background-size: 7vh;
-}
-.header-main-in {
-  height: 4vw;
-  width: 4vw;
-  margin: 0 4vw 0 1vw;
+  background-size: 55px;
+  transition: scale 0.3s ease, background-image 0.3s ease, border 0.3s ease;
   background-image: url(../img/icon-ins-black.png);
-  background-repeat: no-repeat;
-  background-size: 6vh;
-  background-position: center;
-  justify-self: right;
-  transition: background-image 0.5s ease, background-size 0.5s ease;
 }
-.header-main-in:hover {
+.sm-in:hover {
+  scale: 1.2;
+  border: 1px solid #f0ece1;
+  background-color: #f0ece1;
   background-image: url(../img/icon-ins-color.png);
-  background-size: 7vh;
+}
+.sm-fb {
+  width: 55px;
+  height: 55px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 55px;
+  transition: scale 0.3s ease, background-image 0.3s ease, border 0.3s ease;
+  background-image: url(../img/icon-fcb-black.png);
+}
+.sm-fb:hover {
+  scale: 1.2;
+  border: 1px solid #f0ece1;
+  background-color: #f0ece1;
+  background-image: url(../img/icon-fcb-color.png);1
+}
+.sm-fb-box {
+  height: fit-content;
 }
 .section-divider {
   width: 100%;
   height: 10px;
   background-color: #f0ece1;
+}
+.header-main-mobile {
+  display: none;
+}
+.header-main-nav-2 {
+  height: fit-content;
+  max-height: 90px;
+  overflow: visible;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a72920;
+  border-bottom: 3px solid black;
+  position: relative;
+  z-index: 100;
+}
+.nav-2-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-main-nav-2 #header-main-element-2 {
+  display: none;
+  background-color: #a72920;
+  border-top: 3px solid black;
+  height: fit-content;
+  flex-direction: column;
+}
+.header-main-nav-2 #header-main-element-2 a {
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+  height: 2.5em;
+  padding: 0.25em 0 0.25em ;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  line-height: 2.5em;
+  color: black;
+}
+.header-main-nav-2 #header-main-element-2 a:hover {
+  color: #f0ece1;
+  border-color: #f0ece1;
+}
+.header-main-nav-2 a {
+  width: fit-content;
+  height: 90px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.header-main-nav-2 a.sm-box {
+  height: fit-content;
+}
+.header-main-nav-2 a.icon {
+  width: 90px;
+  height: 90px;
+  margin-right: calc(150px - 90px);
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-main-nav-2 a.icon hr {
+  border: 2px solid #f0ece1;
+  width: 70%;
+}
+.header-main-nav-2 a.icon hr#hr-top {
+  margin-top: 20px;
+}
+.header-main-nav-2 a.icon hr#hr-bottom {
+  margin-bottom: 20px;
+}
+.active {
+  background-color: #04aa6d;
+  color: white;
 }
 .footer-main {
   width: 100%;
@@ -149,4 +213,20 @@ body:after {
 }
 #footer-impressum {
   margin-right: 20px;
+}
+@media only screen and (max-width: 1200px) {
+  .header-main-pc {
+    display: none;
+  }
+  .header-main-mobile {
+    display: contents;
+  }
+  .header-main-logo {
+    padding: 0 calc((100vw - 90px - 350px) / 2) 0 calc((100vw - 90px - 350px) / 2) ;
+  }
+  .sm-fb, .sm-in {
+    width: 45px;
+    height: 45px;
+    background-size: 45px;
+  }
 }

@@ -14,45 +14,91 @@
     <link rel="stylesheet" href="../css/pol.css" />
   </head>
   <body>
-    <header class="header-main">
-      <div id="privacy-banner" class="hidden">
-        <p>
-          Wir teilen wir ihnen mit, dass wir Cookies und drittanbieter Cookies
-          verwenden, um sicherzustellen, dass Sie die bestmögliche Erfahrung auf
-          unserer Website erhalten. <br />
-          Durch die Nutzung unserer Website stimmen Sie dem zu.
-        </p>
-        <p>
-          Vi informiamo che utilizziamo cookie e cookie di terze parti per
-          garantire che riceviate la migliore esperienza possibile sul nostro
-          sito web. <br />
-          Utilizzando il nostro sito web, l'utente accetta questo.
-        </p>
-        <button id="accept-button">Ok</button>
+    <div id="privacy-banner" class="hidden">
+      <p>
+        Wir teilen wir ihnen mit, dass wir Cookies und drittanbieter Cookies
+        verwenden, um sicherzustellen, dass Sie die bestmögliche Erfahrung auf
+        unserer Website erhalten. <br />
+        Durch die Nutzung unserer Website stimmen Sie dem zu.
+      </p>
+      <p>
+        Vi informiamo che utilizziamo cookie e cookie di terze parti per
+        garantire che riceviate la migliore esperienza possibile sul nostro
+        sito web. <br />
+        Utilizzando il nostro sito web, l'utente accetta questo.
+      </p>
+      <button id="accept-button">Ok</button>
+    </div>
+    <script src="../js/policy.js"></script>
+    <header>
+      <div class="header-main-pc">
+        <nav class="header-main-nav">
+          <a href="index.html"><div class="header-main-logo"></div></a>
+          <a href="ein.html"
+            ><div id="element-1" class="header-main-element">Einsätze</div></a
+          >
+          <a href="fuh.html"
+            ><div id="element-2" class="header-main-element">Fuhrpark</div></a
+          >
+          <a href="mit.html"
+            ><div id="element-3" class="header-main-element">Mitglieder</div></a
+          >
+          <a href="gal.html"
+            ><div id="element-5" class="header-main-element">Galerie</div></a
+          >
+        </nav>
+        <div class="sm">
+          <a target="_blank" href="https://www.facebook.com/FeuerwehrSterzing/"
+            ><div class="sm-fb"></div
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/feuerwehr.sterzing/"
+            ><div class="sm-in"></div
+          ></a>
+        </div>
       </div>
-      <script src="../js/policy.js"></script>
-      <nav class="header-main-nav">
-        <a href="../index.html"><div class="header-main-logo"></div></a>
-        <a href="../ein.html"
-          ><div id="element-1" class="header-main-element">Einsätze</div></a
-        >
-        <a href="../fuh.html"
-          ><div id="element-2" class="header-main-element">Fuhrpark</div></a
-        >
-        <a href="../mit.html"
-          ><div id="element-3" class="header-main-element">Mitglieder</div></a
-        >
-        <a href="../gal.html"
-          ><div id="element-5" class="header-main-element">Galerie</div></a
-        >
-      </nav>
-      <div class="header-main-sm">
-        <a target="_blank" href="https://www.facebook.com/FeuerwehrSterzing/"
-          ><div class="header-main-fb"></div
-        ></a>
-        <a target="_blank" href="https://www.instagram.com/feuerwehr.sterzing/"
-          ><div class="header-main-in"></div
-        ></a>
+      <div class="header-main-mobile">
+        <div class="header-main-nav-2">
+          <div class="nav-2-box">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <hr id="hr-top" />
+              <hr />
+              <hr id="hr-bottom" />
+            </a>
+            <a href="index.html"> <div class="header-main-logo"></div></a>
+            <div class="sm">
+              <a
+                class="sm-box"
+                target="_blank"
+                href="https://www.facebook.com/FeuerwehrSterzing/"
+                ><div class="sm-fb"></div
+              ></a>
+              <a
+                class="sm-box"
+                target="_blank"
+                href="https://www.instagram.com/feuerwehr.sterzing/"
+                ><div class="sm-in"></div
+              ></a>
+            </div>
+          </div>
+          <div id="header-main-element-2">
+            <a href="ein.html">Einsätze</a>
+            <a href="fuh.html">Fuhrpark</a>
+            <a href="mit.html">Mitglieder</a>
+            <a href="gal.html">Galerie</a>
+          </div>
+        </div>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("header-main-element-2");
+            if (x.style.display === "flex") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "flex";
+            }
+          }
+        </script>
       </div>
     </header>
     <main>
@@ -164,31 +210,8 @@
           </div>
           <hr />
           <div class="fahrzeuge-info-text">
-            <p>
-              Das Kleinrüstfahrzeug der Feuerwehr Sterzing ist ein umgebauter VW
-              Transporter, der sich als unverzichtbares Einsatzfahrzeug bewährt
-              hat. Mit an Bord befinden sich eine batteriebetriebene Spreize und
-              Schere, Hebekissen, ein Generator sowie eine Vielzahl weiterer
-              wichtiger Rettungs- und Werkzeugausrüstungen. Dieses Fahrzeug, oft
-              als Vorrausrüstfahrzeug bezeichnet, zeichnet sich durch seine
-              Wendigkeit und Schnelligkeit aus und ist daher in den meisten
-              Notfallsituationen einer der ersten Helfer vor Ort. <br />
-              <br />
-              Die batteriebetriebene Spreize und Schere ermöglichen es, schnell
-              und effizient eingeklemmte Personen aus Fahrzeugen zu befreien,
-              während die Hebekissen schwere Lasten anheben können. Der
-              Generator stellt die notwendige Energie für die verschiedenen
-              Werkzeuge und die Beleuchtung bereit. Zusätzlich verfügt das
-              Kleinrüstfahrzeug über eine breite Palette von Spezialwerkzeugen,
-              darunter Schneidewerkzeuge und Hydraulikzylinder, die bei
-              technischen Rettungseinsätzen von unschätzbarem Wert sind. <br />
-              <br />
-              Insgesamt ist das Kleinrüstfahrzeug ein unverzichtbares Instrument
-              im Dienst der Feuerwehr Sterzing und trägt maßgeblich dazu bei,
-              Leben zu retten und Brände effektiv zu bekämpfen. Mit seiner
-              herausragenden Ausrüstung und schnellen Reaktionsfähigkeit ist es
-              ein unverzichtbarer Teil der Notfallmaßnahmen in der Region.
-            </p>
+            <p>Das Kleinrüstfahrzeug der FF Sterzing wurde von der Firma Ziegler auf einem VW T5 aus dem Jahr 2010 aufgebaut, der Funkrufnamen lautet Kleinrüst Sterzing. Das Kleinrüstfahrzeug rückt vor allem bei Einsätzen der Alarmstufen 4, 5 und 6 also kleinen, mittleren und schweren Verkehrsunfällen aus. Das kompakte und wendige Kleinrüstfahrzeug ermöglicht es den Wehrleuten schnell und sicher an den Einsatzort zu gelangen, und sofort mit den Rettungs- und Absicherungsmaßnahmen zu beginnen. <br><br>Das Kleinrüstfahrzeug verfügt über eine Vielzahl an Geräten und Werkzeugen. Das Wichtigste darunter ist wahrscheinlich das schwere Rettungsgerät: Schere, Spreizer und Rettungszylinder. Das auf dem Kleinrüstfahrzeug untergebrachte Schwere Rettungsgerät ist batteriebetrieben, was eine sehr schnelle und unkomplizierte Handhabung ermöglicht. Auch an Bord des Kleinrüstfahrzeugs befinden sich Absperrmaterial, verschiedene Werkzeugkoffer, Werkzeug für Türöffnungen, ein Aggregat, eine Kettensäge, verschiedene Feuerlöscher und Ausrüstung für die Insektenbekämpfung. Das Auto verfügt außerdem über einen ausfahrbaren Lichtmast auf dem Dach.
+              </p>
           </div>
         </div>
       </div>
@@ -196,7 +219,7 @@
         <div class="fahrzeuge-box">
           <a class="fuh-anchor" id="fuh-lf"></a>
           <div><h1>Löschfahrzeug</h1></div>
-          <div class="slider">
+          <div class="slider2">
             <div class="list">
               <div class="item">
                 <img src="../img/LF/LF-1.jpg" alt="" />
@@ -221,11 +244,11 @@
               </div>
             </div>
             <div class="buttons">
-              <button id="prev">←</button>
-              <button id="next">→</button>
+              <button id="prev2">←</button>
+              <button id="next2">→</button>
             </div>
             <ul class="dots">
-              <li class="active"></li>
+              <li class="active2"></li>
               <li></li>
               <li></li>
               <li></li>
@@ -233,7 +256,7 @@
               <li></li>
               <li></li>
             </ul>
-            <script src="../js/slider.js"></script>
+            <script src="../js/slider2.js"></script>
           </div>
           <hr />
           <div class="fahrzeuge-info-box">
@@ -299,22 +322,7 @@
           <hr />
           <div class="fahrzeuge-info-text">
             <p>
-              Das Feuerwehrfahrzeug 3 der Feuerwehr Sterzing ist ein treues
-              Arbeitspferd, das trotz seines Alters eine unverzichtbare Rolle in
-              der Einsatzflotte der Feuerwehr spielt. Dieses Löschfahrzeug (LF)
-              ist zwar eines der älteren Modelle, aber seine Robustheit und
-              Zuverlässigkeit machen es zu einem unverzichtbaren Bestandteil des
-              Teams. <br />
-              <br />Das LF ist mit zwei Pumpen ausgestattet, wodurch es
-              vielseitig einsetzbar ist. Eine Pumpe ist fest im Fahrzeug
-              integriert, während die zweite tragbar ist. Dies ermöglicht es dem
-              Fahrzeug, in verschiedenen Situationen effizient eingesetzt zu
-              werden. <br />
-              <br />
-              Die Hauptaufgabe dieses Fahrzeugs besteht darin, die anderen
-              Feuerwehrgruppen bei Bränden mit Wasser zu versorgen. Es ist immer
-              zur Stelle, wenn eine Wasserquelle benötigt wird, und hat sich in
-              dieser Rolle als äußerst zuverlässig erwiesen.
+              Das Löschfahrzeug der FF Sterzing, dessen Funkrufnamen Fahrzeug 3 Sterzing lautet, wurde von der Firma Ziegler auf einem Mercedes Benz 1124 AF aus dem Jahr 1999 aufgebaut. Das Löschfahrzeug rückt immer dann aus, wenn mehr Wasser als in einem Tankwagen gespeichert ist benötigt wird, denn das Löschfahrzeug ist dafür verantwortlich Wasser anzusaugen und zum Einsatzort zu pumpen. <br> <br>Möglich wird dies durch die Tragkraftspritze, die bei einem Druck von 10 Bar 1000 Liter die Minute leistet und die Heckpumpe des Fahrzeugs, die über die gleiche Leistung verfügt. Zum Ansaugen von Wasser befinden sich 8 A-Saugschläuche samt Saugkorb und anderem Zubehör an Bord des Fahrzeuges. In den seitlichen Stauräumen befinden sich auch zwei Schlauchhaspeln mit einer Gesamtlänge von jeweils 160 Metern. Auch B und C Schläuche mit Verteilern, Entleerungsventilen und Ähnlichem findet man auf dem Löschfahrzeug. Des Weiteren ist das LF auch mit einem Aggregat, einem Hochdruckreiniger und verschiedenen Feuerlöschern ausgestattet.
             </p>
           </div>
         </div>
@@ -323,16 +331,6 @@
         <div class="fahrzeuge-box">
           <a class="fuh-anchor" id="fuh-old"></a>
           <div><h1>Mannschaftstransportfahrzeug</h1></div>
-          <div class="slider">
-            <div class="list">
-              <div class="item">
-                <img src="../img/img-LR.png" alt="" />
-              </div>
-            </div>
-            <div class="buttons"></div>
-            <ul class="dots"></ul>
-            <script src="../js/slider.js"></script>
-          </div>
           <hr />
           <div class="fahrzeuge-info-box">
             <div class="fahrzeuge-info">
