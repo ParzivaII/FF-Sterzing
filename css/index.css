@@ -6,29 +6,34 @@
 }
 .homepage-intro {
   width: 100%;
-  background-image: url(../img/icon-lfv.png), url(../img/pic-halle.jpg);
+  background-image: url(../img/pic-halle.jpg);
   background-repeat: no-repeat;
-  background-size: 30vw, cover;
-  background-position: center 25vh, bottom;
+  background-size: cover;
+  background-position: bottom;
   height: calc(100vh - 93px);
-  position: relative;
-  align-items: top;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
-  z-index: 9;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
-.homepage-intro-title {
+.homepage-intro div {
+  height: fit-content;
+  width: fit-content;
+  padding: 1vw;
+}
+.homepage-intro div h1 {
   font-family: Ubuntu, sans-serif;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  margin-top: 12vh;
-  font-size: 3.7vw;
+  font-size: 9vh;
   color: #f0ece1;
   opacity: 0;
   filter: blur(4px);
+  text-align: center;
 }
-.homepage-intro-title:nth-child(1) {
+.homepage-intro img {
+  height: 60%;
+}
+.homepage-intro div h1:nth-child(1) {
   animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 @keyframes fade-in {
@@ -172,4 +177,9 @@
 .contact hr {
   border: 1px solid black;
   margin: 0;
+}
+@media only screen and (max-width: 1200px) {
+  .homepage-intro {
+    height: 100vh;
+  }
 }
