@@ -4,16 +4,18 @@
 main {
   min-height: calc(100vh - 90px - 60px - 3px);
   height: fit-content;
+  display: flex;
+  align-items: center;
 }
-.maintainance {
-  margin-top: 93px;
+main h1 {
+  width: 100%;
   font-family: Ubuntu, sans-serif;
   font-size: 2vw;
-  color: white;
-  position: absolute;
-  top: calc(100% / 2 - 93px);
-  left: calc(100% / 2 - 15vw);
+  color: #f0ece1;
+  text-align: center;
 }
-.header-main-nav ul li a[href="ein.html"] {
-  color: white;
+@media only screen and (max-width: 1200px) {
+  main {
+    min-height: calc(100vh - 135px - 60px - 3px);
+  }
 }
