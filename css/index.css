@@ -18,28 +18,31 @@
   justify-content: space-around;
 }
 .homepage-intro div {
+  width: 50%;
   height: fit-content;
-  width: fit-content;
-  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .homepage-intro div h1 {
-  font-family: Ubuntu, sans-serif;
-  font-size: 9vh;
+  text-align: center;
+  width: 100%;
   color: #f0ece1;
+  font-size: 4vw;
   opacity: 0;
   filter: blur(4px);
-  text-align: center;
 }
 .homepage-intro div h1:nth-child(1) {
   animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
-.homepage-intro img {
-  opacity: 0;
+.homepage-intro div img {
+  width: 70%;
+  height: auto;
   filter: blur(4px);
+  opacity: 0;
   text-align: center;
-  height: 60%;
 }
-.homepage-intro img:nth-child(2) {
+.homepage-intro div img:nth-child(2) {
   animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 @keyframes fade-in {
@@ -184,16 +187,18 @@
   border: 1px solid black;
   margin: 0;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
   .homepage-intro {
-    height: 100vh;
-  }
-  .homepage-intro img {
-    height: auto;
-    max-height: 60vh;
-    max-width: 80vw;
+    min-height: calc(100vw - 138px);
+    height: calc(100vh - 138px);
   }
   .homepage-intro div {
-    font-size: 3vw;
+    width: 80%;
+    height: fit-content;
+  }
+  .homepage-intro div h1 {
+    font-size: 8vw;
+    padding: 0;
+    margin: 0;
   }
 }

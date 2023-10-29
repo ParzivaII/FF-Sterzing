@@ -19,11 +19,16 @@ main table {
 }
 main table td,
 th {
+  width: fit-content;
   border: 2px solid #a72920;
 }
-main table th {
+main table tr th div {
+  min-height: 2.5em;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 3;
   font-size: 25px;
 }
 main table td {
