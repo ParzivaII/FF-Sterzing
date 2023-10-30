@@ -99,4 +99,14 @@
   .fuhrpark-zug-fahrzeuge a {
     margin: 20px 0 20px;
   }
+  .fahrzeuge {
+    width: 95vw;
+    max-width: 30em;
+  }
+  .fahrzeuge div img {
+    width: 95vw;
+    max-width: 30em;
+    height: calc(95vw / 16 * 9);
+    max-height: calc(30em / 16 * 9);
+  }
 }
