@@ -47,7 +47,7 @@
 }
 .fahrzeuge-link {
   text-decoration: none;
-  margin: 5px 0 5px 15px;
+  margin: 5px 15px 5px 15px;
   height: fit-content;
   color: black;
   border-radius: 5px;
@@ -60,7 +60,7 @@
   color: #f0ece1;
 }
 .fahrzeuge {
-  width: 550px;
+  width: 30em;
   height: fit-content;
   background-color: #f0ece1;
   overflow: hidden;
@@ -81,8 +81,8 @@
 .fahrzeuge-img {
   align-self: center;
   position: relative;
-  width: 550px;
-  height: 310px;
+  width: 30em;
+  height: calc(30em / 16 * 9);
   border-top: 5px solid black;
 }
 .divider {
