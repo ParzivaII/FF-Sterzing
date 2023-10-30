@@ -9,26 +9,29 @@
   justify-content: space-between;
 }
 .linebreak hr {
-  width: calc(100vw - 300px);
+  width: calc(100vw - 240px - 40px);
   border: 3px solid #f0ece1;
   margin: 0;
 }
-.linebreak p {
+.linebreak .mobile, .linebreak .pc {
   color: #f0ece1;
   margin: 0 0 0 20px;
   font-size: 30px;
 }
+.linebreak .mobile {
+  display: none;
+}
 #linebreak-ver {
-  width: calc(100vw - 220px);
+  width: calc(100vw - 160px - 40px);
 }
 #linebreak-mad {
-  width: calc(100vw - 390px);
+  width: calc(100vw - 330px - 40px);
 }
 #linebreak-jfw {
-  width: calc(100vw - 300px);
+  width: calc(100vw - 250px - 40px);
 }
 #linebreak-ehm {
-  width: calc(100vw - 285px);
+  width: calc(100vw - 225px - 40px);
 }
 .div-act {
   width: 100%;
@@ -58,30 +61,55 @@
 }
 .div-mad {
   height: fit-content;
+  width: fit-content;
 }
 .div-mad-group {
-  margin-top: 1em;
+  margin: 1em 3vw 0 3vw;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: left;
+  justify-content: space-around;
 }
 .div-jfw {
   height: fit-content;
   margin: 1em 0 1em;
 }
 .div-jfw-group {
-  margin: 1em 0 2em;
+  margin: 1em 3vw 2em 3vw;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: left;
+  justify-content: space-around;
 }
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 1100px) {
   .div-ver-group {
     flex-direction: column;
     height: 35em;
+  }
+  .linebreak p.pc {
+    display: none;
+    margin: 0;
+  }
+  .linebreak p.mobile {
+    display: contents;
+    width: fit-content;
+    padding: 10px;
+  }
+  #linebreak-akt {
+    width: calc(100vw);
+  }
+  #linebreak-ver {
+    width: calc(100vw);
+  }
+  #linebreak-mad {
+    width: calc(100vw - 185px);
+  }
+  #linebreak-jfw {
+    width: calc(100vw);
+  }
+  #linebreak-ehm {
+    width: calc(100vw);
   }
 }

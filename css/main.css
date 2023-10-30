@@ -185,6 +185,13 @@ body:after {
 .header-main-nav-2 a.icon hr {
   border: 2px solid black;
   width: 70%;
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
 }
 .header-main-nav-2 a.icon:hover hr {
   border-color: #f0ece1;
