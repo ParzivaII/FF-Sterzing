@@ -168,7 +168,7 @@ body:after {
   height: fit-content;
 }
 .header-main-nav-2 a.icon {
-  width: 6em;
+  width: 12vh;
   height: 100%;
   background-color: #a72920;
   display: flex;
