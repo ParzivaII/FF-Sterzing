@@ -113,155 +113,150 @@
       <div class="fahrzeuge">
         <div class="fahrzeuge-box">
           <a class="fuh-anchor" id="fuh-kdo"></a>
-          <div><h1>Kommandofahrzeug</h1></div>
-          <div class="slider">
-            <div class="list">
-              <div class="item">
-                <img src="../img/KDO/kdo-1.jpg" alt="" />
+          <div class="fahrzeuge-intro">
+            <h1>Kommandofahrzeug</h1>
+            <div class="slider">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/KDO/kdo-1.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KDO/kdo-2.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KDO/kdo-3.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KDO/kdo-4.jpg" alt="" />
+                </div>
               </div>
-              <div class="item">
-                <img src="../img/KDO/kdo-2.jpg" alt="" />
+              <div class="buttons">
+                <button id="prev">←</button>
+                <button id="next">→</button>
               </div>
-              <div class="item">
-                <img src="../img/KDO/kdo-3.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/KDO/kdo-4.jpg" alt="" />
-              </div>
-            </div>
-            <div class="buttons">
-              <button id="prev">←</button>
-              <button id="next">→</button>
-            </div>
-            <ul class="dots">
-              <li class="active"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <script>
-              let slider = document.querySelector(".slider .list");
-              let items = document.querySelectorAll(".slider .list .item");
-              let next = document.getElementById("next");
-              let prev = document.getElementById("prev");
-              let dots = document.querySelectorAll(".slider .dots li");
+              <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <script>
+                let slider = document.querySelector(".slider .list");
+                let items = document.querySelectorAll(".slider .list .item");
+                let next = document.getElementById("next");
+                let prev = document.getElementById("prev");
+                let dots = document.querySelectorAll(".slider .dots li");
 
-              let lengthItems = items.length - 1;
-              let active = 0;
-              next.onclick = function () {
-                active = active + 1 <= lengthItems ? active + 1 : 0;
-                reloadSlider();
-              };
-              prev.onclick = function () {
-                active = active - 1 >= 0 ? active - 1 : lengthItems;
-                reloadSlider();
-              };
-              function reloadSlider() {
-                slider.style.left = -items[active].offsetLeft + "px";
-                //
-                let last_active_dot = document.querySelector(
-                  ".slider .dots li.active"
-                );
-                last_active_dot.classList.remove("active");
-                dots[active].classList.add("active");
-
-                clearInterval(refreshInterval);
-                refreshInterval = setInterval(() => {
-                  next.click();
-                }, 10000);
-              }
-
-              dots.forEach((li, key) => {
-                li.addEventListener("click", () => {
-                  active = key;
+                let lengthItems = items.length - 1;
+                let active = 0;
+                next.onclick = function () {
+                  active = active + 1 <= lengthItems ? active + 1 : 0;
                   reloadSlider();
+                };
+                prev.onclick = function () {
+                  active = active - 1 >= 0 ? active - 1 : lengthItems;
+                  reloadSlider();
+                };
+                function reloadSlider() {
+                  slider.style.left = -items[active].offsetLeft + "px";
+                  //
+                  let last_active_dot = document.querySelector(
+                    ".slider .dots li.active"
+                  );
+                  last_active_dot.classList.remove("active");
+                  dots[active].classList.add("active");
+
+                  clearInterval(refreshInterval);
+                  refreshInterval = setInterval(() => {
+                    next.click();
+                  }, 10000);
+                }
+
+                dots.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active = key;
+                    reloadSlider();
+                  });
                 });
-              });
-              window.onresize = function (event) {
-                reloadSlider();
-              };
-            </script>
+                window.onresize = function (event) {
+                  reloadSlider();
+                };
+              </script>
+            </div>
           </div>
           <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-afi.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Aufbaufirma: <br />
-                    Sitzplätze:<br />
-                    Zugehörigkeit:</b
-                  >
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  Kommando Sterzing<br />
-                  2007<br />Kofler Fahrzeugbau<br />
-                  5
-                </p>
-                <p class="text-double">
-                  Feuerwehr Sterzing - <br />
-                  Kommando
-                </p>
-              </div>
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p>Kommando Sterzing</p>
             </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />
-                    Motorleistung [kW]: <br />
-                    Übersetzung:
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p class="text-double">
-                  Land Rover <br />
-                  Discovery 3
-                </p>
-                <p>
-                  3,23 <br />
-                  140<br />
-                  Allrad
-                </p>
-              </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p class="text2">
+                Land Rover <br />
+                Discovery 3
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>2007</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>3,23T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afi.png" alt="" />
+              <h3>Aufbaufirma:</h3>
+              <p>Kofler Fahrzeugbau</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>140kW</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>5</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Allrad</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-zug.png" alt="" />
+              <h3>Zugehörigkeit:</h3>
+              <p class="text3">
+                Feuerwehr <br class="br-mobile" />
+                Sterzing <br class="br-mobile" />
+                - Kommando
+              </p>
             </div>
           </div>
           <hr />
           <div class="fahrzeuge-info-text">
             <p>
-              Kommando (Kdo) Das Kommandofahrzeug der FF Sterzing, dessen
-              taktische Bezeichnung KDO-A (Kommandofahrzeug- Allrad) lautet,
-              wurde von der Firma Kofler Fahrzeugbau auf einem Land Rover
-              Discovery 3 aus dem Jahre 2007 Aufgebaut. Mit dem Kommadofahrzeug
-              wird bei nahezu bei jedem Einsatz ausgerückt, in der Stadt sowie
-              im gesamten Abschnitt bei größeren Schadensereignissen mit dem
-              Kommandanten oder anderen delegierten Funktionären am Steuer. Das
-              Kommandofahrzeug trifft stets als erstes am Einsatzort ein, und
-              ermöglicht es den Verantwortungsträgern die Lage schnell und
-              gezielt auszukundschaften, taktische Entscheidungen zu treffen und
-              so lösch oder Rettungseinsätze effizient zu Koordinieren.
+              Das Kommandofahrzeug der FF Sterzing, dessen taktische Bezeichnung
+              KDO-A (Kommandofahrzeug-Allrad) lautet, wurde von der Firma Kofler
+              Fahrzeugbau auf einem Land Rover Discovery 3 aus dem Jahre 2007
+              aufgebaut. Mit dem Kommadofahrzeug wird bei nahezu jedem Einsatz
+              ausgerückt, in der Stadt sowie im gesamten Abschnitt, bei größeren
+              Schadensereignissen mit dem Kommandanten, oder anderen delegierten
+              Funktionären am Steuer. Das Kommandofahrzeug trifft stets als
+              erstes am Einsatzort ein, und ermöglicht es den
+              Verantwortungsträgern die Lage schnell und gezielt
+              auszukundschaften, taktische Entscheidungen zu treffen und so
+              Lösch- oder Rettungseinsätze effizient zu Koordinieren.
               <br /><br />
-              Die Ausstattung des „Kommando Sterzing ist auf das wichtigste
-              begrenzt, so finden sich an Bord neben Persönlicher
-              Schutzausrüstung, Erste Hilfe Koffer, einem Werkzeugkoffer und
+              Die Ausstattung des "Kommando Sterzing" ist auf das Wichtigste
+              begrenzt, so finden sich an Bord neben persönlicher
+              Schutzausrüstung, Erste-Hilfe-Koffer, einem Werkzeugkoffer und
               Absicherungsmaterial natürlich auch Funkgeräte und die
               Einsatzleiter-Weste.
             </p>

@@ -18,6 +18,7 @@
 }
 .fuhrpark-zug-fahrzeuge {
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
@@ -96,8 +97,8 @@
     flex-direction: column;
     align-items: center;
   }
-  .fuhrpark-zug-fahrzeuge a {
-    margin: 20px 0 20px;
+  .fuhrpark-zug-fahrzeuge a.fahrzeuge-link {
+    margin: 0;
   }
   .fahrzeuge {
     width: 95vw;
@@ -108,5 +109,29 @@
     max-width: 30em;
     height: calc(95vw / 16 * 9);
     max-height: calc(30em / 16 * 9);
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-tk2 {
+    margin-bottom: 10px;
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-krf {
+    margin-bottom: 10px;
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-lf {
+    margin-bottom: 10px;
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-srf {
+    margin-bottom: 10px;
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-mtf {
+    margin-bottom: 10px;
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-dlk {
+    margin-bottom: 10px;
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-ktf {
+    margin-bottom: 10px;
+  }
+  .fuhrpark-zug-fahrzeuge a#fahrzeug-bz {
+    margin-bottom: 10px;
   }
 }
