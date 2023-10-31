@@ -1,5 +1,6 @@
 #element-3 {
   color: #f0ece1;
+  border-color: #f0ece1;
 }
 .linebreak {
   width: 100%;
@@ -13,7 +14,8 @@
   border: 3px solid #f0ece1;
   margin: 0;
 }
-.linebreak .mobile, .linebreak .pc {
+.linebreak .mobile,
+.linebreak .pc {
   color: #f0ece1;
   margin: 0 0 0 20px;
   font-size: 30px;
@@ -98,18 +100,18 @@
     padding: 10px;
   }
   #linebreak-akt {
-    width: calc(100vw);
+    width: calc(100vw - 80px);
   }
   #linebreak-ver {
-    width: calc(100vw);
-  }
-  #linebreak-mad {
-    width: calc(100vw - 185px);
-  }
-  #linebreak-jfw {
-    width: calc(100vw);
+    width: calc(100vw - 165px);
   }
   #linebreak-ehm {
-    width: calc(100vw);
+    width: calc(100vw - 200px);
+  }
+  #linebreak-mad {
+    width: calc(100vw - 190px);
+  }
+  #linebreak-jfw {
+    width: calc(100vw - 105px);
   }
 }

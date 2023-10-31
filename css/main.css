@@ -113,10 +113,33 @@ body:after {
   scale: 1.2;
   border: 1px solid #f0ece1;
   background-color: #f0ece1;
-  background-image: url(../img/icon-fcb-color.png);1
+  background-image: url(../img/icon-fcb-color.png);
 }
 .sm-fb-box {
   height: fit-content;
+}
+.sm-mobile {
+  height: 90px;
+  display: flex;
+}
+.header-main-nav-2 .sm-mobile a {
+  height: 90px;
+  width: calc(130px / 2);
+  background-repeat: no-repeat;
+  background-size: 55px;
+  background-position: center;
+}
+.sm-mobile a.sm-mobile-fb {
+  background-image: url(../img/icon-fcb-black.png);
+}
+.sm-mobile a.sm-mobile-fb:hover {
+  background-image: url(../img/icon-fcb-color.png);
+}
+.sm-mobile a.sm-mobile-in {
+  background-image: url(../img/icon-ins-black.png);
+}
+.sm-mobile a.sm-mobile-in:hover {
+  background-image: url(../img/icon-ins-color.png);
 }
 .section-divider {
   width: 100%;
@@ -145,6 +168,7 @@ body:after {
   display: none;
   background-color: #a72920;
   border-top: 3px solid black;
+  border-bottom: 1px solid black;
   height: fit-content;
   flex-direction: column;
 }
@@ -152,10 +176,10 @@ body:after {
   font-size: 2em;
   text-align: center;
   width: 100%;
-  height: 3em;
+  height: 90px;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  line-height: 3em;
+  line-height: 90px;
   color: black;
 }
 .header-main-nav-2 #header-main-element-2 a:hover {
@@ -172,7 +196,7 @@ body:after {
 .header-main-nav-2 a.sm-box {
   height: fit-content;
 }
-.header-main-nav-2 a.icon {
+.header-main-nav-2 div a.header-mobile-menu {
   width: 90px;
   height: 90px;
   margin-right: calc(150px - 90px);
@@ -182,7 +206,7 @@ body:after {
   justify-content: space-around;
   align-items: center;
 }
-.header-main-nav-2 a.icon hr {
+.header-main-nav-2 div a.header-mobile-menu hr {
   border: 2px solid black;
   width: 70%;
   display: block;
@@ -193,17 +217,21 @@ body:after {
   margin-inline-end: auto;
   overflow: hidden;
 }
-.header-main-nav-2 a.icon:hover hr {
+.header-main-nav-2 div a.header-mobile-menu:hover hr {
   border-color: #f0ece1;
 }
-.header-main-nav-2 a.icon:active hr {
+.header-main-nav-2 div a.header-mobile-menu:active hr {
   border-color: #f0ece1;
 }
-.header-main-nav-2 a.icon hr#hr-top {
+.header-main-nav-2 div a.header-mobile-menu hr#hr-top {
   margin-top: 30px;
 }
-.header-main-nav-2 a.icon hr#hr-bottom {
+.header-main-nav-2 div a.header-mobile-menu hr#hr-bottom {
   margin-bottom: 30px;
+}
+.header-main-nav-2 .nav-2-box div {
+  width: 130px;
+  margin: 0;
 }
 .active {
   background-color: #04aa6d;
@@ -240,16 +268,7 @@ body:after {
   }
   .header-main-logo {
     height: 90px;
-    width: calc(90px / 4.668 * 3.269);
-    background-size: 55px;
-    padding: 0 calc((100vw - 90px - 350px) / 2) 0 calc((100vw - 90px - 350px) / 2) ;
-  }
-  .sm {
-    height: 90px;
-  }
-  .sm-fb, .sm-in {
-    width: 55px;
-    height: 55px;
+    width: 90px;
     background-size: 55px;
   }
 }

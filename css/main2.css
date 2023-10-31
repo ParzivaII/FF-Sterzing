@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../fonts/Ubuntu-Medium.ttf);
+  --color-white: #f0ece1;
+}
+body {
+  max-width: 100vw;
+  height: fit-content;
+  background-color: black;
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+}
+main {
+  max-width: 100vw;
+  overflow: hidden;
+}
+body:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../img/icon-ff-white.png) url(../img/icon-fcb-color.png)
+    url(../img/icon-ff-white.png) url(../img/icon-ins-color.png)
+    url(../img/pic-halle.png);
+}
+.header-main-pc {
+  width: 100%;
+  height: 90px;
+  background-color: #a72920;
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.header-main-nav {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  justify-content: start;
+}
