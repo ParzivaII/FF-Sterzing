@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zug 1 mit Tanklöschfahrzeug 1 der Feuerwehr Sterzing">
+    <meta
+      name="description"
+      content="Zug 1 mit Tanklöschfahrzeug 1 der Feuerwehr Sterzing"
+    />
     <title>FF-Sterzing Fuhrpark</title>
     <link rel="icon" href="../img/icon-ff-black.png" type="img/png" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/fuh-sub.css" />
-    <link rel="stylesheet" href="../css/pol.css">
+    <link rel="stylesheet" href="../css/pol.css" />
   </head>
   <body>
     <div id="privacy-banner" class="hidden">
@@ -20,8 +23,8 @@
       </p>
       <p>
         Vi informiamo che utilizziamo cookie e cookie di terze parti per
-        garantire che riceviate la migliore esperienza possibile sul nostro
-        sito web. <br />
+        garantire che riceviate la migliore esperienza possibile sul nostro sito
+        web. <br />
         Utilizzando il nostro sito web, l'utente accetta questo.
       </p>
       <button id="accept-button">Ok</button>
@@ -87,7 +90,9 @@
           </div>
           <div id="header-main-element-2">
             <a href="../ein.html">Einsätze</a>
-            <a style="color: #f0ece1; border-color: #f0ece1;" href="../fuh.html">Fuhrpark</a>
+            <a style="color: #f0ece1; border-color: #f0ece1" href="../fuh.html"
+              >Fuhrpark</a
+            >
             <a href="../mit.html">Mitglieder</a>
             <a href="../gal.html">Galerie</a>
           </div>
@@ -107,165 +112,201 @@
     <main>
       <div class="fahrzeuge">
         <div class="fahrzeuge-box">
-        <a class="fuh-anchor" id="fuh-tlf1"></a>
-          <div><h1>Tanklöschfahrzeug 4000/200</h1></div>
-          <div class="slider">
-            <div class="list">
-              <div class="item">
-                <img src="../img/TLF-1/tlf1-1.jpg" alt="" />
+          <a class="fuh-anchor" id="fuh-tlf1"></a>
+          <div class="fahrzeuge-intro">
+            <h1>
+              Tanklöschfahrzeug <br />
+              4000/200
+            </h1>
+            <div class="slider">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/TLF-1/tlf1-1.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/TLF-1/tlf1-2.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/TLF-1/tlf1-3.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/TLF-1/tlf1-4.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/TLF-1/tlf1-5.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/TLF-1/tlf1-6.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/TLF-1/tlf1-7.jpg" alt="" />
+                </div>
               </div>
-              <div class="item">
-                <img src="../img/TLF-1/tlf1-2.jpg" alt="" />
+              <div class="buttons">
+                <button id="prev">←</button>
+                <button id="next">→</button>
               </div>
-              <div class="item">
-                <img src="../img/TLF-1/tlf1-3.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/TLF-1/tlf1-4.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/TLF-1/tlf1-5.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/TLF-1/tlf1-6.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/TLF-1/tlf1-7.jpg" alt="" />
-              </div>
-            </div>
-            <div class="buttons">
-              <button id="prev">←</button>
-              <button id="next">→</button>
-            </div>
-            <ul class="dots">
-              <li class="active"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <script>
-              let slider = document.querySelector('.slider .list');
-                let items = document.querySelectorAll('.slider .list .item');
-                let next = document.getElementById('next');
-                let prev = document.getElementById('prev');
-                let dots = document.querySelectorAll('.slider .dots li');
-                
+              <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <script>
+                let slider = document.querySelector(".slider .list");
+                let items = document.querySelectorAll(".slider .list .item");
+                let next = document.getElementById("next");
+                let prev = document.getElementById("prev");
+                let dots = document.querySelectorAll(".slider .dots li");
+
                 let lengthItems = items.length - 1;
                 let active = 0;
-                next.onclick = function(){
-                    active = active + 1 <= lengthItems ? active + 1 : 0;
-                    reloadSlider();
-                }
-                prev.onclick = function(){
-                    active = active - 1 >= 0 ? active - 1 : lengthItems;
-                    reloadSlider();
-                }
-                function reloadSlider(){
-                    slider.style.left = -items[active].offsetLeft + 'px';
-                    // 
-                    let last_active_dot = document.querySelector('.slider .dots li.active');
-                    last_active_dot.classList.remove('active');
-                    dots[active].classList.add('active');
-                
-                    clearInterval(refreshInterval);
-                    refreshInterval = setInterval(()=> {next.click()}, 10000);
-                }
-                
-                dots.forEach((li, key) => {
-                    li.addEventListener('click', ()=>{
-                         active = key;
-                         reloadSlider();
-                    })
-                })
-                window.onresize = function(event) {
-                    reloadSlider();
+                next.onclick = function () {
+                  active = active + 1 <= lengthItems ? active + 1 : 0;
+                  reloadSlider();
                 };
-                </script>
+                prev.onclick = function () {
+                  active = active - 1 >= 0 ? active - 1 : lengthItems;
+                  reloadSlider();
+                };
+                function reloadSlider() {
+                  slider.style.left = -items[active].offsetLeft + "px";
+                  //
+                  let last_active_dot = document.querySelector(
+                    ".slider .dots li.active"
+                  );
+                  last_active_dot.classList.remove("active");
+                  dots[active].classList.add("active");
+
+                  clearInterval(refreshInterval);
+                  refreshInterval = setInterval(() => {
+                    next.click();
+                  }, 10000);
+                }
+
+                dots.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active = key;
+                    reloadSlider();
+                  });
+                });
+                window.onresize = function (event) {
+                  reloadSlider();
+                };
+              </script>
+            </div>
           </div>
           <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-afi.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-ats.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Aufbaufirma: <br />
-                    Sitzplätze insg.:<br /> </p><div class="text-div"><p class="text-double">
-                    Sitzplätze mit <br> ATS-Ausrüstung<br /> </p>:</div><p>
-                    Zugehörigkeit:
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  Tank 1 Sterzing<br />2020
-                  <br />Rosenbauer<br />9<br />4
-                </p>
-                <p class="text-double">
-                  Feuerwehr Sterzing - <br />
-                  1. Zug
-                </p>
-              </div>
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p class="text2">
+                Tank 1<br />
+                Sterzing
+              </p>
             </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-pum.png" alt="" />
-                <img src="../img/icons-fuh/icon-vol.png" alt="" />
-                <img src="../img/icons-fuh/icon-foa.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />
-                    Motorleistung [kW]: <br /></p><div class="text-div"><p class="text-double">
-                    Pumpenleistung <br>[bar][L/min] </p><p>:</p></div><p>
-                      Wasserkapazität [L]: <br />
-                      Schaumkapazität [L]: <br>
-                      Übersetzung: 
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  MAN TGM 18.320<br />18<br />
-                  250 <br />10/3000<br />4000 <br />200 <br />Allrad
-                </p>
-              </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>2020</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p class="text2">
+                MAN TGM <br />
+                18.320
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afi.png" alt="" />
+              <h3>Aufbaufirma:</h3>
+              <p class="">Rosenbauer</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>18T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Allrad</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>250kW</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-pum.png" alt="" />
+              <h3>Pumpenleistung:</h3>
+              <p class="text2">10bar <br />3000L/min</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>9</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3 class="text4">
+                <div>
+                  Sitzplätze <br />
+                  (ATS)
+                </div>
+                :
+              </h3>
+              <p>4</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-vol.png" alt="" />
+              <h3>Wasserkapazität:</h3>
+              <p>4000L</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-foa.png" alt="" />
+              <h3>Schaumkapazität:</h3>
+              <p>200L</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-zug.png" alt="" />
+              <h3>Zugehörigkeit:</h3>
+              <p class="text3">
+                Feuerwehr <br class="br-mobile" />
+                Sterzing <br />
+                - 1. Zug
+              </p>
             </div>
           </div>
           <hr />
           <div class="fahrzeuge-info-text">
-            <p>Das TLF-A 4000/200 der FF Sterzing wurde von der Firma Rosenbauer auf einem
-              MAN TGM 18.320 aus dem Jahr 2020 aufgebaut. Der Funkrufnamen lautet „Tank 1
-              Sterzing“. Egal ob bei kleinen oder großen Bränden, in der Stadt oder der
-              Umgebung, als Absicherung bei Verkehrsunfällen auf der Staatsstraße oder auf der
-              Autobahn - das TLF rückt in nahezu jedem Einsatzszenario aus. <br><br>
-              Vier von den neun Sitzplätzen auf dem Fahrzeug sind für Atemschutzträger
-              ausgerüstet. Diese Atemschutzträger können mit den 4500 im Tank gespeicherten
-              Litern Wasser und den 200 Litern Schaum blitzschnell einen Löschangriff starten.
-              Bei langen Einsätzen ist auf die Heckpumpe mit einer Leistung von 3000 Litern pro
-              Minute bei 10 Bar Verlass. Auch mit an Bord sind zwei Lüftungsgeräte, eine große
-              Menge an Schlauchmaterial und entsprechende Armaturen, Absperrmaterial, ein
-              Stromerzeuger und verschiedene Werkzeuge für den Atemschutz-Einsatz wie
-              Notrettungsset, Rauchvorhang, Nebellöschsystem und Wärmebildkamera. Auf dem
-              Dach des TLF befinden sich neben einem weiteren Geräte-Stauraum auch eine
-              Leiter, ein Lichtmast und ein Monitor.</p>
+            <p>
+              Das TLF-A 4000/200 der FF Sterzing wurde von der Firma Rosenbauer
+              auf einem MAN TGM 18.320 aus dem Jahr 2020 aufgebaut. Der
+              Funkrufnamen lautet „Tank 1 Sterzing“. Egal ob bei kleinen oder
+              großen Bränden, in der Stadt oder der Umgebung, als Absicherung
+              bei Verkehrsunfällen auf der Staatsstraße oder auf der Autobahn -
+              das TLF rückt in nahezu jedem Einsatzszenario aus.
+              <br /><br />
+              Vier von den neun Sitzplätzen auf dem Fahrzeug sind für
+              Atemschutzträger ausgerüstet. Diese Atemschutzträger können mit
+              den 4500 im Tank gespeicherten Litern Wasser und den 200 Litern
+              Schaum blitzschnell einen Löschangriff starten. Bei langen
+              Einsätzen ist auf die Heckpumpe mit einer Leistung von 3000 Litern
+              pro Minute bei 10 Bar Verlass. Auch mit an Bord sind zwei
+              Lüftungsgeräte, eine große Menge an Schlauchmaterial und
+              entsprechende Armaturen, Absperrmaterial, ein Stromerzeuger und
+              verschiedene Werkzeuge für den Atemschutz-Einsatz wie
+              Notrettungsset, Rauchvorhang, Nebellöschsystem und
+              Wärmebildkamera. Auf dem Dach des TLF befinden sich neben einem
+              weiteren Geräte-Stauraum auch eine Leiter, ein Lichtmast und ein
+              Monitor.
+            </p>
           </div>
         </div>
       </div>

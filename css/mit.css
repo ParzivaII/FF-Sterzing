@@ -101,17 +101,22 @@
   }
   #linebreak-akt {
     width: calc(100vw - 80px);
+    min-width: calc(390px - 80px);
   }
   #linebreak-ver {
     width: calc(100vw - 165px);
+    min-width: calc(390px - 165px);
   }
   #linebreak-ehm {
     width: calc(100vw - 200px);
+    min-width: calc(390px - 200px);
   }
   #linebreak-mad {
     width: calc(100vw - 190px);
+    min-width: calc(390px - 190px);
   }
   #linebreak-jfw {
     width: calc(100vw - 105px);
+    min-width: calc(390px - 105px);
   }
 }

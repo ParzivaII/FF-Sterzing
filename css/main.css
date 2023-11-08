@@ -4,6 +4,7 @@
   --color-white: #f0ece1;
 }
 body {
+  min-width: 390px;
   max-width: 100vw;
   height: fit-content;
   background-color: black;
@@ -11,6 +12,7 @@ body {
   font-family: Ubuntu, sans-serif;
 }
 main {
+  min-width: 390px;
   max-width: 100vw;
   overflow: hidden;
 }

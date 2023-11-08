@@ -23,8 +23,8 @@
       </p>
       <p>
         Vi informiamo che utilizziamo cookie e cookie di terze parti per
-        garantire che riceviate la migliore esperienza possibile sul nostro
-        sito web. <br />
+        garantire che riceviate la migliore esperienza possibile sul nostro sito
+        web. <br />
         Utilizzando il nostro sito web, l'utente accetta questo.
       </p>
       <button id="accept-button">Ok</button>
@@ -90,7 +90,9 @@
           </div>
           <div id="header-main-element-2">
             <a href="../ein.html">Einsätze</a>
-            <a style="color: #f0ece1; border-color: #f0ece1;" href="../fuh.html">Fuhrpark</a>
+            <a style="color: #f0ece1; border-color: #f0ece1" href="../fuh.html"
+              >Fuhrpark</a
+            >
             <a href="../mit.html">Mitglieder</a>
             <a href="../gal.html">Galerie</a>
           </div>
@@ -111,435 +113,489 @@
       <div class="fahrzeuge">
         <div class="fahrzeuge-box">
           <a class="fuh-anchor" id="fuh-krf"></a>
-          <div><h1>Kleines Rüstfahrzeug</h1></div>
-          <div class="slider">
-            <div class="list">
-              <div class="item">
-                <img src="../img/KRF/KRF-1.jpg" alt="" />
+          <div class="fahrzeuge-intro">
+            <h1>Kleines Rüstfahrzeug</h1>
+            <div class="slider">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/KRF/KRF-1.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KRF/KRF-2.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KRF/KRF-3.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KRF/KRF-4.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KRF/KRF-5.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KRF/KRF-6.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KRF/KRF-7.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KRF/KRF-8.jpg" alt="" />
+                </div>
               </div>
-              <div class="item">
-                <img src="../img/KRF/KRF-2.jpg" alt="" />
+              <div class="buttons">
+                <button id="prev">←</button>
+                <button id="next">→</button>
               </div>
-              <div class="item">
-                <img src="../img/KRF/KRF-3.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/KRF/KRF-4.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/KRF/KRF-5.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/KRF/KRF-6.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/KRF/KRF-7.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/KRF/KRF-8.jpg" alt="" />
-              </div>
-            </div>
-            <div class="buttons">
-              <button id="prev">←</button>
-              <button id="next">→</button>
-            </div>
-            <ul class="dots">
-              <li class="active"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <script>
-            let slider = document.querySelector('.slider .list');
-              let items = document.querySelectorAll('.slider .list .item');
-              let next = document.getElementById('next');
-              let prev = document.getElementById('prev');
-              let dots = document.querySelectorAll('.slider .dots li');
-              
-              let lengthItems = items.length - 1;
-              let active = 0;
-              next.onclick = function(){
+              <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <script>
+                let slider = document.querySelector(".slider .list");
+                let items = document.querySelectorAll(".slider .list .item");
+                let next = document.getElementById("next");
+                let prev = document.getElementById("prev");
+                let dots = document.querySelectorAll(".slider .dots li");
+
+                let lengthItems = items.length - 1;
+                let active = 0;
+                next.onclick = function () {
                   active = active + 1 <= lengthItems ? active + 1 : 0;
                   reloadSlider();
-              }
-              prev.onclick = function(){
+                };
+                prev.onclick = function () {
                   active = active - 1 >= 0 ? active - 1 : lengthItems;
                   reloadSlider();
-              }
-              function reloadSlider(){
-                  slider.style.left = -items[active].offsetLeft + 'px';
-                  // 
-                  let last_active_dot = document.querySelector('.slider .dots li.active');
-                  last_active_dot.classList.remove('active');
-                  dots[active].classList.add('active');
-              
+                };
+                function reloadSlider() {
+                  slider.style.left = -items[active].offsetLeft + "px";
+                  //
+                  let last_active_dot = document.querySelector(
+                    ".slider .dots li.active"
+                  );
+                  last_active_dot.classList.remove("active");
+                  dots[active].classList.add("active");
+
                   clearInterval(refreshInterval);
-                  refreshInterval = setInterval(()=> {next.click()}, 10000);
-              }
-              
-              dots.forEach((li, key) => {
-                  li.addEventListener('click', ()=>{
-                       active = key;
-                       reloadSlider();
-                  })
-              })
-              window.onresize = function(event) {
+                  refreshInterval = setInterval(() => {
+                    next.click();
+                  }, 10000);
+                }
+
+                dots.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active = key;
+                    reloadSlider();
+                  });
+                });
+                window.onresize = function (event) {
                   reloadSlider();
-              };
+                };
               </script>
-          </div>
-          <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-afi.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Aufbaufirma: <br />
-                    Sitzplätze:<br />
-                    Zugehörigkeit:</b
-                  >
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  Kleinrüst Sterzing <br />2010 <br />
-                  Ziegler<br />
-                  5
-                </p>
-                <p class="text-double">
-                  Feuerwehr Sterzing - <br />
-                  3. Zug
-                </p>
-              </div>
-            </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />
-                    Motorleistung [kW]: <br />
-                    Übersetzung:
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  VW T5 <br />
-                  3,5 <br />
-                  128 <br />
-                  Allrad
-                </p>
-              </div>
             </div>
           </div>
           <hr />
-          <div class="fahrzeuge-info-text">
-            <p>Das Kleinrüstfahrzeug der FF Sterzing wurde von der Firma Ziegler auf einem VW T5 aus dem Jahr 2010 aufgebaut, der Funkrufnamen lautet Kleinrüst Sterzing. Das Kleinrüstfahrzeug rückt vor allem bei Einsätzen der Alarmstufen 4, 5 und 6 also kleinen, mittleren und schweren Verkehrsunfällen aus. Das kompakte und wendige Kleinrüstfahrzeug ermöglicht es den Wehrleuten schnell und sicher an den Einsatzort zu gelangen, und sofort mit den Rettungs- und Absicherungsmaßnahmen zu beginnen. <br><br>Das Kleinrüstfahrzeug verfügt über eine Vielzahl an Geräten und Werkzeugen. Das Wichtigste darunter ist wahrscheinlich das schwere Rettungsgerät: Schere, Spreizer und Rettungszylinder. Das auf dem Kleinrüstfahrzeug untergebrachte Schwere Rettungsgerät ist batteriebetrieben, was eine sehr schnelle und unkomplizierte Handhabung ermöglicht. Auch an Bord des Kleinrüstfahrzeugs befinden sich Absperrmaterial, verschiedene Werkzeugkoffer, Werkzeug für Türöffnungen, ein Aggregat, eine Kettensäge, verschiedene Feuerlöscher und Ausrüstung für die Insektenbekämpfung. Das Auto verfügt außerdem über einen ausfahrbaren Lichtmast auf dem Dach.
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p class="text2">
+                Kleinrüst<br />
+                Sterzing
               </p>
-          </div>
-        </div>
-      </div>
-      <div class="fahrzeuge">
-        <div class="fahrzeuge-box">
-          <a class="fuh-anchor" id="fuh-lf"></a>
-          <div><h1>Löschfahrzeug</h1></div>
-          <div class="slider2">
-            <div class="list">
-              <div class="item">
-                <img src="../img/LF/LF-1.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/LF/LF-2.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/LF/LF-3.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/LF/LF-4.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/LF/LF-5.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/LF/LF-6.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/LF/LF-7.jpg" alt="" />
-              </div>
             </div>
-            <div class="buttons">
-              <button id="prev2">←</button>
-              <button id="next2">→</button>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>2010</p>
             </div>
-            <ul class="dots">
-              <li class="active2"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <script>
-              let slider2 = document.querySelector('.slider2 .list');
-              let items2 = document.querySelectorAll('.slider2 .list .item');
-              let next2 = document.getElementById('next2');
-              let prev2 = document.getElementById('prev2');
-              let dots2 = document.querySelectorAll('.slider2 .dots li');
-              
-              let lengthItems2 = items2.length - 1;
-              let active2 = 0;
-              next2.onclick = function(){
-                  active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
-                  reloadSlider2();
-              }
-              prev2.onclick = function(){
-                  active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
-                  reloadSlider2();
-              }
-              
-              function reloadSlider2(){
-                  slider2.style.left = -items2[active2].offsetLeft + 'px';
-                  // 
-                  let last_active_dot2 = document.querySelector('.slider2 .dots li.active2');
-                  last_active_dot2.classList.remove('active2');
-                  dots2[active2].classList.add('active2');
-              
-                  clearInterval(refreshInterval2);
-              }
-              
-              dots2.forEach((li, key) => {
-                  li.addEventListener('click', ()=>{
-                       active2 = key;
-                       reloadSlider2();
-                  })
-              })
-              window.onresize = function(event) {
-                  reloadSlider2();
-              };
-            </script>
-          </div>
-          <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-afi.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Aufbaufirma: <br />
-                    Sitzplätze:<br />
-                    Zugehörigkeit:</b
-                  >
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  Fahrzeug 3 <br />1999<br /> Ziegler <br />
-                  9 <br /></p>
-                  <p class="text-double">
-                    Feuerwehr Sterzing - <br />
-                    3. Zug
-                  
-                </p>
-              </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p>VW T5</p>
             </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-pum.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />
-                    Motorleistung [kW]: <br /></p><div class="text-div"><p class="text-double">
-                    Pumpenleistung <br>[bar][L/min] </p><p>:</p></div><p>
-                    Übersetzung: 
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p class="text-double">
-                  Mercedes Benz <br>1124 AF  </p><p>
-                  11<br />
-                  177 <br />
-                  10/1000 × 2 <br />
-                  Allrad, Differenzial
-                </p>
-              </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afi.png" alt="" />
+              <h3>Aufbaufirma:</h3>
+              <p class="">Ziegler</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>3,5T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Allrad</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>128kW</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>5</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-zug.png" alt="" />
+              <h3>Zugehörigkeit:</h3>
+              <p class="text3">
+                Feuerwehr <br class="br-mobile" />
+                Sterzing <br />
+                - 3. Zug
+              </p>
             </div>
           </div>
           <hr />
           <div class="fahrzeuge-info-text">
             <p>
-              Das Löschfahrzeug der FF Sterzing, dessen Funkrufnamen Fahrzeug 3 Sterzing lautet, wurde von der Firma Ziegler auf einem Mercedes Benz 1124 AF aus dem Jahr 1999 aufgebaut. Das Löschfahrzeug rückt immer dann aus, wenn mehr Wasser als in einem Tankwagen gespeichert ist benötigt wird, denn das Löschfahrzeug ist dafür verantwortlich Wasser anzusaugen und zum Einsatzort zu pumpen. <br> <br>Möglich wird dies durch die Tragkraftspritze, die bei einem Druck von 10 Bar 1000 Liter die Minute leistet und die Heckpumpe des Fahrzeugs, die über die gleiche Leistung verfügt. Zum Ansaugen von Wasser befinden sich 8 A-Saugschläuche samt Saugkorb und anderem Zubehör an Bord des Fahrzeuges. In den seitlichen Stauräumen befinden sich auch zwei Schlauchhaspeln mit einer Gesamtlänge von jeweils 160 Metern. Auch B und C Schläuche mit Verteilern, Entleerungsventilen und Ähnlichem findet man auf dem Löschfahrzeug. Des Weiteren ist das LF auch mit einem Aggregat, einem Hochdruckreiniger und verschiedenen Feuerlöschern ausgestattet.
+              Das Kleinrüstfahrzeug der FF Sterzing wurde von der Firma Ziegler
+              auf einem VW T5 aus dem Jahr 2010 aufgebaut, der Funkrufnamen
+              lautet Kleinrüst Sterzing. Das Kleinrüstfahrzeug rückt vor allem
+              bei Einsätzen der Alarmstufen 4, 5 und 6 also kleinen, mittleren
+              und schweren Verkehrsunfällen aus. Das kompakte und wendige
+              Kleinrüstfahrzeug ermöglicht es den Wehrleuten schnell und sicher
+              an den Einsatzort zu gelangen, und sofort mit den Rettungs- und
+              Absicherungsmaßnahmen zu beginnen. <br /><br />Das
+              Kleinrüstfahrzeug verfügt über eine Vielzahl an Geräten und
+              Werkzeugen. Das Wichtigste darunter ist wahrscheinlich das schwere
+              Rettungsgerät: Schere, Spreizer und Rettungszylinder. Das auf dem
+              Kleinrüstfahrzeug untergebrachte Schwere Rettungsgerät ist
+              batteriebetrieben, was eine sehr schnelle und unkomplizierte
+              Handhabung ermöglicht. Auch an Bord des Kleinrüstfahrzeugs
+              befinden sich Absperrmaterial, verschiedene Werkzeugkoffer,
+              Werkzeug für Türöffnungen, ein Aggregat, eine Kettensäge,
+              verschiedene Feuerlöscher und Ausrüstung für die
+              Insektenbekämpfung. Das Auto verfügt außerdem über einen
+              ausfahrbaren Lichtmast auf dem Dach.
             </p>
           </div>
         </div>
       </div>
       <div class="fahrzeuge">
         <div class="fahrzeuge-box">
-          <a class="fuh-anchor" id="fuh-old"></a>
-          <div><h1>Mannschaftstransportfahrzeug</h1></div>
-          <div class="slider3">
-            <div class="list">
-              <div class="item">
-                <img src="../img/img-LR.jpg" alt="" />
+          <a class="fuh-anchor" id="fuh-lf"></a>
+          <div class="fahrzeuge-intro">
+            <h1>Löschfahrzeug</h1>
+            <div class="slider2">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/LF/LF-1.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/LF/LF-2.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/LF/LF-4.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/LF/LF-5.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/LF/LF-6.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/LF/LF-7.jpg" alt="" />
+                </div>
               </div>
-              <!--<div class="item">
-                <img src="" alt="" />
+              <div class="buttons">
+                <button id="prev2">←</button>
+                <button id="next2">→</button>
               </div>
-              <div class="item">
-                <img src="" alt="" />
-              </div>
-              <div class="item">
-                <img src="" alt="" />
-              </div>
-              <div class="item">
-                <img src="" alt="" />
-              </div>
-              <div class="item">
-                <img src="" alt="" />
-              </div>
-              <div class="item">
-                <img src="" alt="" />
-              </div> -->
+              <ul class="dots">
+                <li class="active2"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <script>
+                let slider2 = document.querySelector(".slider2 .list");
+                let items2 = document.querySelectorAll(".slider2 .list .item");
+                let next2 = document.getElementById("next2");
+                let prev2 = document.getElementById("prev2");
+                let dots2 = document.querySelectorAll(".slider2 .dots li");
+
+                let lengthItems2 = items2.length - 1;
+                let active2 = 0;
+                next2.onclick = function () {
+                  active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
+                  reloadSlider2();
+                };
+                prev2.onclick = function () {
+                  active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
+                  reloadSlider2();
+                };
+
+                function reloadSlider2() {
+                  slider2.style.left = -items2[active2].offsetLeft + "px";
+                  //
+                  let last_active_dot2 = document.querySelector(
+                    ".slider2 .dots li.active2"
+                  );
+                  last_active_dot2.classList.remove("active2");
+                  dots2[active2].classList.add("active2");
+
+                  clearInterval(refreshInterval2);
+                }
+
+                dots2.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active2 = key;
+                    reloadSlider2();
+                  });
+                });
+                window.onresize = function (event) {
+                  reloadSlider2();
+                };
+              </script>
             </div>
-            <!--<div class="buttons">
-              <button id="prev3">←</button>
-              <button id="next3">→</button>
-            </div>-->
-            <!--<ul class="dots">
-              <li class="active3"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>-->
-            <script>
-              let slider3 = document.querySelector('.slider3 .list');
-              let items3 = document.querySelectorAll('.slider3 .list .item');
-              let next3 = document.getElementById('next3');
-              let prev3 = document.getElementById('prev3');
-              let dots3 = document.querySelectorAll('.slider3 .dots li');
-              
-              let lengthItems3 = items3.length - 1;
-              let active3 = 0;
-              next3.onclick = function(){
-                  active3 = active3 + 1 <= lengthItems3 ? active3 + 1 : 0;
-                  reloadSlider3();
-              }
-              prev3.onclick = function(){
-                  active3 = active3 - 1 >= 0 ? active3 - 1 : lengthItems3;
-                  reloadSlider3();
-              }
-              
-              function reloadSlider3(){
-                  slider3.style.left = -items3[active3].offsetLeft + 'px';
-                  // 
-                  let last_active_dot3 = document.querySelector('.slider3 .dots li.active3');
-                  last_active_dot3.classList.remove('active3');
-                  dots3[active3].classList.add('active3');
-              
-                  clearInterval(refreshInterval3);
-              }
-              
-              dots3.forEach((li, key) => {
-                  li.addEventListener('click', ()=>{
-                       active3 = key;
-                       reloadSlider3();
-                  })
-              })
-              window.onresize = function(event) {
-                  reloadSlider3();
-              };
-            </script>
           </div>
           <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Sitzplätze:<br />
-                    Zugehörigkeit:</b
-                  >
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  Fahrzeug 1 Sterzing<br />
-                  1966<br />5<br />
-                </p>
-                <p class="text-double">
-                  Feuerwehr Sterzing - <br />
-                  3. Zug
-                </p>
-              </div>
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p class="text2">
+                Fahrzeug 3<br />
+                Sterzing
+              </p>
             </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>1999</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p class="text3">
+                Mercedes<br class="br-mobile" />
+                Benz <br />
+                1124 AF
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afi.png" alt="" />
+              <h3>Aufbaufirma:</h3>
+              <p class="">Ziegler</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>11T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Allrad, Differenzial</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>177kW</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-pum.png" alt="" />
+              <h3>Pumpenleistung:</h3>
+              <p class="text2">10bar <br />1000L/min</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-pum.png" alt="" />
+              <h3 class="text4">
+                <div>
+                  Pumpenleistung <br />
+                  (TS)
+                </div>
+                :
+              </h3>
+              <p class="text2">10bar <br />1000L/min</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>9</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-zug.png" alt="" />
+              <h3>Zugehörigkeit:</h3>
+              <p class="text3">
+                Feuerwehr <br class="br-mobile" />
+                Sterzing <br />
+                - 3. Zug
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="fahrzeuge-info-text">
+            <p>
+              Das Löschfahrzeug der FF Sterzing, dessen Funkrufnamen Fahrzeug 3
+              Sterzing lautet, wurde von der Firma Ziegler auf einem Mercedes
+              Benz 1124 AF aus dem Jahr 1999 aufgebaut. Das Löschfahrzeug rückt
+              immer dann aus, wenn mehr Wasser als in einem Tankwagen
+              gespeichert ist benötigt wird, denn das Löschfahrzeug ist dafür
+              verantwortlich Wasser anzusaugen und zum Einsatzort zu pumpen.
+              <br /><br />
+              Möglich wird dies durch die Tragkraftspritze, die bei einem Druck
+              von 10 Bar 1000 Liter die Minute leistet und die Heckpumpe des
+              Fahrzeugs, die über die gleiche Leistung verfügt. Zum Ansaugen von
+              Wasser befinden sich 8 A-Saugschläuche samt Saugkorb und anderem
+              Zubehör an Bord des Fahrzeuges. In den seitlichen Stauräumen
+              befinden sich auch zwei Schlauchhaspeln mit einer Gesamtlänge von
+              jeweils 160 Metern. Auch B und C Schläuche mit Verteilern,
+              Entleerungsventilen und Ähnlichem findet man auf dem
+              Löschfahrzeug. Des Weiteren ist das LF auch mit einem Aggregat,
+              einem Hochdruckreiniger und verschiedenen Feuerlöschern
+              ausgestattet.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="fahrzeuge">
+        <div class="fahrzeuge-box" style="margin-bottom: 5em">
+          <a class="fuh-anchor" id="fuh-old"></a>
+          <div class="fahrzeuge-intro">
+            <h1>Mannschaftstransport <br />-fahrzeug</h1>
+            <div class="slider3">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/img-LR.jpg" alt="" />
+                </div>
+                <!--<div class="item">
+                  <img src="" alt="" />
+                </div>
+                <div class="item">
+                  <img src="" alt="" />
+                </div>
+                <div class="item">
+                  <img src="" alt="" />
+                </div>
+                <div class="item">
+                  <img src="" alt="" />
+                </div>
+                <div class="item">
+                  <img src="" alt="" />
+                </div>
+                <div class="item">
+                  <img src="" alt="" />
+                </div> -->
               </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />
-                    Motorleistung [kW]: <br />
-                    Übersetzung:
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p class="text-double">
-                  Land Rover 109 <br />
-                  Station Wagon
-                </p>
-                <p>2,63 <br />56<br />Allrad</p>
-              </div>
+              <!--<div class="buttons">
+                <button id="prev3">←</button>
+                <button id="next3">→</button>
+              </div>-->
+              <!--<ul class="dots">
+                <li class="active3"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>-->
+              <script>
+                let slider3 = document.querySelector(".slider3 .list");
+                let items3 = document.querySelectorAll(".slider3 .list .item");
+                let next3 = document.getElementById("next3");
+                let prev3 = document.getElementById("prev3");
+                let dots3 = document.querySelectorAll(".slider3 .dots li");
+
+                let lengthItems3 = items3.length - 1;
+                let active3 = 0;
+                next3.onclick = function () {
+                  active3 = active3 + 1 <= lengthItems3 ? active3 + 1 : 0;
+                  reloadSlider3();
+                };
+                prev3.onclick = function () {
+                  active3 = active3 - 1 >= 0 ? active3 - 1 : lengthItems3;
+                  reloadSlider3();
+                };
+
+                function reloadSlider3() {
+                  slider3.style.left = -items3[active3].offsetLeft + "px";
+                  //
+                  let last_active_dot3 = document.querySelector(
+                    ".slider3 .dots li.active3"
+                  );
+                  last_active_dot3.classList.remove("active3");
+                  dots3[active3].classList.add("active3");
+
+                  clearInterval(refreshInterval3);
+                }
+
+                dots3.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active3 = key;
+                    reloadSlider3();
+                  });
+                });
+                window.onresize = function (event) {
+                  reloadSlider3();
+                };
+              </script>
+            </div>
+          </div>
+          <hr />
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p class="text2">
+                Fahrzeug 1<br />
+                Sterzing
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>1966</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p class="text2">
+                Land Rover 109 <br />
+                Station Wagon
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>2,63T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Allrad</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>56kW</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>5</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-zug.png" alt="" />
+              <h3>Zugehörigkeit:</h3>
+              <p class="text3">
+                Feuerwehr <br class="br-mobile" />
+                Sterzing <br />
+                - 3. Zug
+              </p>
             </div>
           </div>
           <hr />

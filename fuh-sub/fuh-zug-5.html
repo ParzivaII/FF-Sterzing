@@ -110,423 +110,535 @@
       <div class="fahrzeuge">
         <div class="fahrzeuge-box">
           <a class="fuh-anchor" id="fuh-dlk"></a>
-          <div><h1>Drehleiter mit Korb</h1></div>
-          <div class="slider">
-            <div class="list">
-              <div class="item">
-                <img src="../img/DLK/dlk-1.jpg" alt="" />
+          <div class="fahrzeuge-intro">
+            <h1>Drehleiter mit Korb</h1>
+            <div class="slider">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/DLK/dlk-1.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/DLK/dlk-2.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/DLK/dlk-3.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/DLK/dlk-4.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/DLK/dlk-5.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/DLK/dlk-6.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/DLK/dlk-7.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/DLK/dlk-8.jpg" alt="" />
+                </div>
               </div>
-              <div class="item">
-                <img src="../img/DLK/dlk-2.jpg" alt="" />
+              <div class="buttons">
+                <button id="prev">←</button>
+                <button id="next">→</button>
               </div>
-              <div class="item">
-                <img src="../img/DLK/dlk-3.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/DLK/dlk-4.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/DLK/dlk-5.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/DLK/dlk-6.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/DLK/dlk-7.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/DLK/dlk-8.jpg" alt="" />
-              </div>
-            </div>
-            <div class="buttons">
-              <button id="prev">←</button>
-              <button id="next">→</button>
-            </div>
-            <ul class="dots">
-              <li class="active"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <script>
-              let slider = document.querySelector(".slider .list");
-              let items = document.querySelectorAll(".slider .list .item");
-              let next = document.getElementById("next");
-              let prev = document.getElementById("prev");
-              let dots = document.querySelectorAll(".slider .dots li");
+              <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <script>
+                let slider = document.querySelector(".slider .list");
+                let items = document.querySelectorAll(".slider .list .item");
+                let next = document.getElementById("next");
+                let prev = document.getElementById("prev");
+                let dots = document.querySelectorAll(".slider .dots li");
 
-              let lengthItems = items.length - 1;
-              let active = 0;
-              next.onclick = function () {
-                active = active + 1 <= lengthItems ? active + 1 : 0;
-                reloadSlider();
-              };
-              prev.onclick = function () {
-                active = active - 1 >= 0 ? active - 1 : lengthItems;
-                reloadSlider();
-              };
-              function reloadSlider() {
-                slider.style.left = -items[active].offsetLeft + "px";
-                //
-                let last_active_dot = document.querySelector(
-                  ".slider .dots li.active"
-                );
-                last_active_dot.classList.remove("active");
-                dots[active].classList.add("active");
-
-                clearInterval(refreshInterval);
-                refreshInterval = setInterval(() => {
-                  next.click();
-                }, 10000);
-              }
-
-              dots.forEach((li, key) => {
-                li.addEventListener("click", () => {
-                  active = key;
+                let lengthItems = items.length - 1;
+                let active = 0;
+                next.onclick = function () {
+                  active = active + 1 <= lengthItems ? active + 1 : 0;
                   reloadSlider();
+                };
+                prev.onclick = function () {
+                  active = active - 1 >= 0 ? active - 1 : lengthItems;
+                  reloadSlider();
+                };
+                function reloadSlider() {
+                  slider.style.left = -items[active].offsetLeft + "px";
+                  //
+                  let last_active_dot = document.querySelector(
+                    ".slider .dots li.active"
+                  );
+                  last_active_dot.classList.remove("active");
+                  dots[active].classList.add("active");
+
+                  clearInterval(refreshInterval);
+                  refreshInterval = setInterval(() => {
+                    next.click();
+                  }, 10000);
+                }
+
+                dots.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active = key;
+                    reloadSlider();
+                  });
                 });
-              });
-              window.onresize = function (event) {
-                reloadSlider();
-              };
-            </script>
+                window.onresize = function (event) {
+                  reloadSlider();
+                };
+              </script>
+            </div>
           </div>
           <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-afi.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-ats.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Aufbaufirma: <br />
-                    Sitzplätze:<br />
-                    ATS-Ausrüstung: <br />
-                    Zugehörigkeit:</b
-                  >
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>Drehleiter Sterzing<br />1995 <br />Metz<br />3 <br />3</p>
-                <p class="text-double">
-                  Bezirk Wipptal/Sterzing - <br />
-                  Stützpunkt Sterzing - 5.Zug
-                </p>
-              </div>
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p class="text2">
+                Drehleiter<br />
+                Sterzing
+              </p>
             </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-lei.png" alt="" />
-                <img src="../img/icons-fuh/icon-kor.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />
-                    Motorleistung [kW]: <br />Leiterlänge [m]:
-                    <br />Korb-Stehplätze: <br />
-                    Übersetzung:
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  MAN 14 272<br />15 <br />198<br />30 <br />2 <br />Hinterrad
-                </p>
-              </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>1995</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p class="text2">
+                MAN TGM <br />
+                14.272
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afi.png" alt="" />
+              <h3>Aufbaufirma:</h3>
+              <p>Metz</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>15T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-lei.png" alt="" />
+              <h3>Leiterlänge:</h3>
+              <p>30m</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Hinterrad</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>198kW</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>3</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ats.png" alt="" />
+              <h3 class="text4">
+                <div>
+                  Atemschutz <br />
+                  Ausrüstungen
+                </div>
+                :
+              </h3>
+              <p>3</p>
+            </div>
+            <div id="box-l" class="info-box">
+              <h3>
+                <img src="../img/icons-fuh/icon-zug.png" alt="" />Zugehörigkeit:
+              </h3>
+              <p class="text2">
+                Bezirk Wipptal/Sterzing<br class="br-mobile" />
+                - <br class="br-mobile2" />Stützpunkt Sterzing<br
+                  class="br-mobile"
+                />
+                - 5. Zug
+              </p>
             </div>
           </div>
           <hr />
           <div class="fahrzeuge-info-text">
-            <p></p>
+            <p>
+              Die Drehleiter mit Korb ist ein Fahrzeug des Bezirks
+              Wipptal/Sterzing und bei der FF Sterzing Stationiert. Der
+              Funkrufnamen lautet Drehleiter Sterzing. Als Aufbaumodell diente
+              der Firma Rosenbauer (Ehemals Metz) ein Man 14 272 aus dem Jahr
+              1995. Die Drehleiter rückt in vielen verschiedenen
+              Einsatsszenarien im ganzen Bezirk aus. In erster Linie ist die
+              Drehleiter auf Personenrettung ausgelegt, bei Brandeinsätzen dient
+              sie aber auch als Löscheinrichtung von oben. Dank der am Korb
+              verbauten Schleifkorbtragenhalterung unterstützt die Drehleiter
+              bei Notwendigkeit auch andere Rettungsorganisationen wie das weiße
+              Kreuz. <br /><br />
+              Die Drehleiter verfügt über 6 Gerätestauräume in denen die
+              notwendige Ausrüstung untergebracht ist. Unter anderem gehört
+              dazu: 3 Atemschutzgeräte, Schlauch- u. Lichtmaterial, ein
+              Elektronischer Lüfter, Sicherungsmaterial (Kletterseil, Gurte,
+              Karabiner etc. ), 2 Motorkettensägen und eine Schleifkorbtrage.
+              Die Leiter an sich kann eine Maximalhöhe von 30 Metern erreichen,
+              und wird dabei von 4 Stützen gestützt. Im Korb finden 2 Wehrleute
+              platz.
+            </p>
           </div>
         </div>
       </div>
       <div class="fahrzeuge">
         <div class="fahrzeuge-box">
           <a class="fuh-anchor" id="fuh-ktf"></a>
-          <div><h1>Kleines Transportfahrzeug</h1></div>
-          <div class="slider2">
-            <div class="list">
-              <div class="item">
-                <img src="../img/KTF/ktf-1.jpg" alt="" />
+          <div class="fahrzeuge-intro">
+            <h1>Kleines Transportfahrzeug</h1>
+            <div class="slider2">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/KTF/ktf-1.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KTF/ktf-2.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KTF/ktf-3.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/KTF/ktf-4.jpg" alt="" />
+                </div>
               </div>
-              <div class="item">
-                <img src="../img/KTF/ktf-2.jpg" alt="" />
+              <div class="buttons">
+                <button id="prev2">←</button>
+                <button id="next2">→</button>
               </div>
-              <div class="item">
-                <img src="../img/KTF/ktf-3.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/KTF/ktf-4.jpg" alt="" />
-              </div>
-            </div>
-            <div class="buttons">
-              <button id="prev2">←</button>
-              <button id="next2">→</button>
-            </div>
-            <ul class="dots">
-              <li class="active2"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <script>
-              let slider2 = document.querySelector(".slider2 .list");
-              let items2 = document.querySelectorAll(".slider2 .list .item");
-              let next2 = document.getElementById("next2");
-              let prev2 = document.getElementById("prev2");
-              let dots2 = document.querySelectorAll(".slider2 .dots li");
+              <ul class="dots">
+                <li class="active2"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <script>
+                let slider2 = document.querySelector(".slider2 .list");
+                let items2 = document.querySelectorAll(".slider2 .list .item");
+                let next2 = document.getElementById("next2");
+                let prev2 = document.getElementById("prev2");
+                let dots2 = document.querySelectorAll(".slider2 .dots li");
 
-              let lengthItems2 = items2.length - 1;
-              let active2 = 0;
-              next2.onclick = function () {
-                active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
-                reloadSlider2();
-              };
-              prev2.onclick = function () {
-                active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
-                reloadSlider2();
-              };
-
-              function reloadSlider2() {
-                slider2.style.left = -items2[active2].offsetLeft + "px";
-                //
-                let last_active_dot2 = document.querySelector(
-                  ".slider2 .dots li.active2"
-                );
-                last_active_dot2.classList.remove("active2");
-                dots2[active2].classList.add("active2");
-
-                clearInterval(refreshInterval2);
-              }
-
-              dots2.forEach((li, key) => {
-                li.addEventListener("click", () => {
-                  active2 = key;
+                let lengthItems2 = items2.length - 1;
+                let active2 = 0;
+                next2.onclick = function () {
+                  active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
                   reloadSlider2();
+                };
+                prev2.onclick = function () {
+                  active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
+                  reloadSlider2();
+                };
+
+                function reloadSlider2() {
+                  slider2.style.left = -items2[active2].offsetLeft + "px";
+                  //
+                  let last_active_dot2 = document.querySelector(
+                    ".slider2 .dots li.active2"
+                  );
+                  last_active_dot2.classList.remove("active2");
+                  dots2[active2].classList.add("active2");
+
+                  clearInterval(refreshInterval2);
+                }
+
+                dots2.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active2 = key;
+                    reloadSlider2();
+                  });
                 });
-              });
-              window.onresize = function (event) {
-                reloadSlider2();
-              };
-            </script>
+                window.onresize = function (event) {
+                  reloadSlider2();
+                };
+              </script>
+            </div>
           </div>
           <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-afi.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Aufbaufirma: <br />
-                    Sitzplätze:<br />
-                    Zugehörigkeit:</b
-                  >
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>Fahrzeug 5 Sterzing<br />2010 <br />Ziegler<br />5</p>
-                <p class="text-double">
-                  Feuerwehr Sterzing - <br />
-                  5. Zug
-                </p>
-              </div>
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p class="text2">
+                Fahrzeug 5<br />
+                Sterzing
+              </p>
             </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-lad.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />Max. Ladungsgewicht
-                    [T]
-                    <br />
-                    Motorleistung [kW]: <br />
-                    Übersetzung:
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>Nissan Navara<br />2,2 <br />0,7<br />126<br />Allrad</p>
-              </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>2010</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p class="text2">
+                Nissan <br />
+                Navara
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afi.png" alt="" />
+              <h3>Aufbaufirma:</h3>
+              <p class="">Ziegler</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>2,2T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-lad.png" alt="" />
+              <h3 class="text4">
+                <div>
+                  Maximales <br />
+                  Ladungsgewicht
+                </div>
+                :
+              </h3>
+              <p>0,7T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Allrad</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>126kW</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>5</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-zug.png" alt="" />
+              <h3>Zugehörigkeit:</h3>
+              <p class="text3">
+                Feuerwehr <br class="br-mobile" />
+                Sterzing <br />
+                - 5. Zug
+              </p>
             </div>
           </div>
           <hr />
           <div class="fahrzeuge-info-text">
-            <p></p>
+            <p>
+              Das Kleintransportfahrzeug der FF Sterzing wurde von der Firma
+              Ziegler auf einem Nissan Navara aus dem Jahr 2010 aufgebaut. Das
+              Kleintransportfahrzeug ist dank der offenen Ladefläche vielseitig
+              einsetzbar, meist wird es aber bei längeren Brandeinsätzen dazu
+              verwendet, Atemschutzflaschen als Nachschub zum Einsatzort zu
+              bringen. <br /><br />
+              Das Kleintransportfahrzeug verfügt über Pulverlöscher und Funk, am
+              Heck ist auch eine Anhängerkupplung vorhanden um verschiedene
+              Anhänger zu ziehen.
+            </p>
           </div>
         </div>
       </div>
       <div class="fahrzeuge">
-        <div class="fahrzeuge-box">
+        <div class="fahrzeuge-box" style="margin-bottom: 5em">
           <a class="fuh-anchor" id="fuh-stf"></a>
-          <div><h1>Schweres Transportfahrzeug</h1></div>
-          <div class="slider3">
-            <div class="list">
-              <div class="item">
-                <img src="../img/STF/stf-1.jpg" alt="" />
+          <div class="fahrzeuge-intro">
+            <h1>Schweres Transportfahrzeug</h1>
+            <div class="slider3">
+              <div class="list">
+                <div class="item">
+                  <img src="../img/STF/stf-1.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/STF/stf-2.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/STF/stf-3.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/STF/stf-4.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/STF/stf-5.jpg" alt="" />
+                </div>
+                <div class="item">
+                  <img src="../img/STF/stf-6.jpg" alt="" />
+                </div>
               </div>
-              <div class="item">
-                <img src="../img/STF/stf-2.jpg" alt="" />
+              <div class="buttons">
+                <button id="prev3">←</button>
+                <button id="next3">→</button>
               </div>
-              <div class="item">
-                <img src="../img/STF/stf-3.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/STF/stf-4.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/STF/stf-5.jpg" alt="" />
-              </div>
-              <div class="item">
-                <img src="../img/STF/stf-6.jpg" alt="" />
-              </div>
-            </div>
-            <div class="buttons">
-              <button id="prev3">←</button>
-              <button id="next3">→</button>
-            </div>
-            <ul class="dots">
-              <li class="active3"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <script>
-              let slider3 = document.querySelector(".slider3 .list");
-              let items3 = document.querySelectorAll(".slider3 .list .item");
-              let next3 = document.getElementById("next3");
-              let prev3 = document.getElementById("prev3");
-              let dots3 = document.querySelectorAll(".slider3 .dots li");
+              <ul class="dots">
+                <li class="active3"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <script>
+                let slider3 = document.querySelector(".slider3 .list");
+                let items3 = document.querySelectorAll(".slider3 .list .item");
+                let next3 = document.getElementById("next3");
+                let prev3 = document.getElementById("prev3");
+                let dots3 = document.querySelectorAll(".slider3 .dots li");
 
-              let lengthItems3 = items3.length - 1;
-              let active3 = 0;
-              next3.onclick = function () {
-                active3 = active3 + 1 <= lengthItems3 ? active3 + 1 : 0;
-                reloadSlider3();
-              };
-              prev3.onclick = function () {
-                active3 = active3 - 1 >= 0 ? active3 - 1 : lengthItems3;
-                reloadSlider3();
-              };
-
-              function reloadSlider3() {
-                slider3.style.left = -items3[active3].offsetLeft + "px";
-                //
-                let last_active_dot3 = document.querySelector(
-                  ".slider3 .dots li.active3"
-                );
-                last_active_dot3.classList.remove("active3");
-                dots3[active3].classList.add("active3");
-
-                clearInterval(refreshInterval3);
-              }
-
-              dots3.forEach((li, key) => {
-                li.addEventListener("click", () => {
-                  active3 = key;
+                let lengthItems3 = items3.length - 1;
+                let active3 = 0;
+                next3.onclick = function () {
+                  active3 = active3 + 1 <= lengthItems3 ? active3 + 1 : 0;
                   reloadSlider3();
+                };
+                prev3.onclick = function () {
+                  active3 = active3 - 1 >= 0 ? active3 - 1 : lengthItems3;
+                  reloadSlider3();
+                };
+
+                function reloadSlider3() {
+                  slider3.style.left = -items3[active3].offsetLeft + "px";
+                  //
+                  let last_active_dot3 = document.querySelector(
+                    ".slider3 .dots li.active3"
+                  );
+                  last_active_dot3.classList.remove("active3");
+                  dots3[active3].classList.add("active3");
+
+                  clearInterval(refreshInterval3);
+                }
+
+                dots3.forEach((li, key) => {
+                  li.addEventListener("click", () => {
+                    active3 = key;
+                    reloadSlider3();
+                  });
                 });
-              });
-              window.onresize = function (event) {
-                reloadSlider3();
-              };
-            </script>
+                window.onresize = function (event) {
+                  reloadSlider3();
+                };
+              </script>
+            </div>
           </div>
           <hr />
-          <div class="fahrzeuge-info-box">
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-tak.png" alt="" />
-                <img src="../img/icons-fuh/icon-yea.png" alt="" />
-                <img src="../img/icons-fuh/icon-afi.png" alt="" />
-                <img src="../img/icons-fuh/icon-sit.png" alt="" />
-                <img src="../img/icons-fuh/icon-zug.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b
-                    >Rufname:<br />
-                    Baujahr:<br />
-                    Aufbaufirma: <br />
-                    Sitzplätze:<br />
-                    Zugehörigkeit:</b
-                  >
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  Last Sterzing<br />
-                  2011<br />Kofler Fahrzeugbau<br />3
-                </p>
-                <p class="text-double">
-                  Bezirk Wipptal/Sterzing - <br />
-                  Stützpunkt Sterzing - 5.Zug
-                </p>
-              </div>
+          <div class="info">
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-tak.png" alt="" />
+              <h3>Rufname:</h3>
+              <p class="text2">
+                Last<br />
+                Sterzing
+              </p>
             </div>
-            <div class="fahrzeuge-info">
-              <div class="fahrzeuge-info-3">
-                <img src="../img/icons-fuh/icon-afa.png" alt="" />
-                <img src="../img/icons-fuh/icon-gew.png" alt="" />
-                <img src="../img/icons-fuh/icon-lad.png" alt="" />
-                <img src="../img/icons-fuh/icon-hor.png" alt="" />
-                <img src="../img/icons-fuh/icon-cra.png" alt="" />
-                <img src="../img/icons-fuh/icon-ueb.png" alt="" />
-              </div>
-              <div class="fahrzeuge-info-1">
-                <p>
-                  <b>
-                    Aufbaumodell: <br />Gewicht [T]: <br />Ladekapazität <br />
-                    Motorleistung [kW]: <br />Max. Hubgewicht
-                    <br />
-                    Übersetzung:
-                  </b>
-                </p>
-              </div>
-              <div class="fahrzeuge-info-2">
-                <p>
-                  MAN 18.340NA<br />12 <br />6 <br />250<br />
-                  6<br />Allrad
-                </p>
-              </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-yea.png" alt="" />
+              <h3>Baujahr:</h3>
+              <p>2011</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afa.png" alt="" />
+              <h3>Aufbaumodell:</h3>
+              <p class="text2">
+                MAN TGM <br />
+                18.340
+              </p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-afi.png" alt="" />
+              <h3>Aufbaufirma:</h3>
+              <p class="text2">Kofler <br />Fahrzeugbau</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-sit.png" alt="" />
+              <h3>Sitzplätze:</h3>
+              <p>3</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-gew.png" alt="" />
+              <h3>Gewicht:</h3>
+              <p>12T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-lad.png" alt="" />
+              <h3 class="text4">
+                <div>
+                  Maximales <br />
+                  Hubgewicht
+                </div>
+                :
+              </h3>
+              <p>6T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-lad.png" alt="" />
+              <h3 class="text4">
+                <div>
+                  Maximales <br />
+                  Ladungsgewicht
+                </div>
+                :
+              </h3>
+              <p>6T</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-ueb.png" alt="" />
+              <h3>Übersetzung:</h3>
+              <p>Allrad</p>
+            </div>
+            <div class="info-box">
+              <img src="../img/icons-fuh/icon-hor.png" alt="" />
+              <h3>Motorleistung:</h3>
+              <p>250kW</p>
+            </div>
+            <div id="box-l" class="info-box">
+              <h3>
+                <img src="../img/icons-fuh/icon-zug.png" alt="" />Zugehörigkeit:
+              </h3>
+              <p class="text2">
+                Bezirk Wipptal/Sterzing<br class="br-mobile" />
+                - <br class="br-mobile2" />Stützpunkt Sterzing<br
+                  class="br-mobile"
+                />
+                - 5. Zug
+              </p>
             </div>
           </div>
           <hr />
           <div class="fahrzeuge-info-text">
-            <p></p>
+            <p>
+              Das Schwertransportfahrzeug ist ein Fahrzeug des Bezirks
+              Wipptal/Sterzing und bei der FF Sterzing Stationiert. Der
+              Funkrufnamen lautet Last Sterzing. Aufgebaut wurde das
+              Schwertransportfahrzeug von der Firma Kofler Fahrzeugbau auf einem
+              MAN 18.340NA aus dem Jahr 2011 aufgebaut. Das
+              Schwertransportfahrzeug rückt vor allem für die technische
+              Hilfeleistung z.B. Bergung von Fahrzeugen oder Bewegung schwerer
+              Lasten z.B. bei Straßenreinigungen aus. <br /><br />
+
+              An Bord des Schwertransportfahrzeuges befinden sich zahlreiche
+              Gerätschaften und Ausrüstungsgegenstände. Darunter befinden sich
+              Spaten, Hacken, Absperrmaterial, Abschleppgurte, eine Motorsäge
+              und Stahlseile. Der Kran an Bord des Schwertransportfahrzeugs hat
+              eine maximale Hubkraft von 6 Tonnen, was auch mit der maximalen
+              Lastkapazität des Fahrzeugs übereinstimmt.
+            </p>
           </div>
         </div>
       </div>
