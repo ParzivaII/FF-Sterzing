@@ -10,30 +10,21 @@
   justify-content: space-between;
 }
 .linebreak hr {
-  width: calc(100vw - 240px - 40px);
+  width: 100vw;
   border: 3px solid #f0ece1;
   margin: 0;
 }
-.linebreak .mobile,
-.linebreak .pc {
+.linebreak div .mobile,
+.linebreak div .pc {
   color: #f0ece1;
-  margin: 0 0 0 20px;
   font-size: 30px;
 }
-.linebreak .mobile {
+.linebreak div .mobile {
   display: none;
 }
-#linebreak-ver {
-  width: calc(100vw - 160px - 40px);
-}
-#linebreak-mad {
-  width: calc(100vw - 330px - 40px);
-}
-#linebreak-jfw {
-  width: calc(100vw - 250px - 40px);
-}
-#linebreak-ehm {
-  width: calc(100vw - 225px - 40px);
+.linebreak div {
+  width: fit-content;
+  margin: 10px;
 }
 .div-act {
   width: 100%;
@@ -66,7 +57,8 @@
   width: fit-content;
 }
 .div-mad-group {
-  margin: 1em 3vw 0 3vw;
+  width: 100vw;
+  min-width: 390px;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
@@ -90,33 +82,13 @@
     flex-direction: column;
     height: 35em;
   }
-  .linebreak p.pc {
+  .linebreak div p.pc {
     display: none;
     margin: 0;
   }
-  .linebreak p.mobile {
+  .linebreak div p.mobile {
     display: contents;
     width: fit-content;
     padding: 10px;
-  }
-  #linebreak-akt {
-    width: calc(100vw - 80px);
-    min-width: calc(390px - 80px);
-  }
-  #linebreak-ver {
-    width: calc(100vw - 165px);
-    min-width: calc(390px - 165px);
-  }
-  #linebreak-ehm {
-    width: calc(100vw - 200px);
-    min-width: calc(390px - 200px);
-  }
-  #linebreak-mad {
-    width: calc(100vw - 190px);
-    min-width: calc(390px - 190px);
-  }
-  #linebreak-jfw {
-    width: calc(100vw - 105px);
-    min-width: calc(390px - 105px);
   }
 }
